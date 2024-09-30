@@ -1,8 +1,16 @@
-{C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v}
+{C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v}
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module ha
+-- Compiling module fa
 
 Top level modules:
-	ha
+	fa
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
 
 } {} {}}
