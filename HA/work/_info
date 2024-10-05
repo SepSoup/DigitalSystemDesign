@@ -10,101 +10,147 @@ z2
 cModel Technology
 Z0 dD:/Digital System Design/examples
 T_opt
-!s110 1727500971
-V1nn<<9f0AnHikJW]UBZb33
-04 2 4 work ha fast 0
-=1-fc3497012add-66f792aa-2e5-282c
+!s110 1728105358
+VNj5<^B;[kaQ9OV^Ozz:T?3
+04 2 4 work tb fast 0
+=1-fc3497012add-6700cb8e-20-24dc
 Z1 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
 Z3 OL;O;2020.4;71
 R0
 T_opt1
-!s110 1727674592
-Vg:zk[Lzdc9A44K13J1J9K1
-Z4 04 2 4 work fa fast 0
-=1-fc3497012add-66fa38e0-44-39b4
+!s110 1728107296
+VQ]O:XZEiLDoUK0kAGTRFR3
+04 13 4 work fourbit_adder fast 0
+=1-fc3497012add-6700d320-109-2200
 R1
 R2
 n@_opt1
 R3
 R0
 T_opt2
-!s110 1727674551
-VoBHId:m;TYDO7THTU>kGA0
-R4
-=1-fc3497012add-66fa38b6-341-5618
-o-quiet -auto_acc_if_foreign -work work
+!s110 1728107182
+VAEk>fJbA1RV7@<jUlmg1l1
+04 6 4 work fba_tb fast 0
+=1-fc3497012add-6700d2ad-377-42ec
+R1
 R2
 n@_opt2
 R3
 R0
 vfa
-Z5 !s110 1727675780
+Z4 !s110 1728107653
 !i10b 1
-!s100 hM;`7^OE85HHl@J0jF9Ng2
-Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IYzXIm[`ALM_B_HgA0>aj31
-Z7 dC:/Users/Digi Max/Desktop/Digital System Design/HA
-Z8 w1727674424
-Z9 8C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v
-Z10 FC:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v
-!i122 14
-L0 11 10
-Z11 VDg1SIo80bB@j0V0VzS_@n1
-Z12 OL;L;2020.4;71
+!s100 cRN[Q=E>9be@45AFF4I8?2
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ic0h@H^6Ui`n2I]LFNTecQ1
+Z6 dC:/Users/Digi Max/Desktop/Digital System Design/HA
+w1728107419
+8C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v
+!i122 66
+L0 1 10
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z13 !s108 1727675780.000000
-Z14 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v|
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v|
+Z9 !s108 1728107653.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v|
 !i113 0
-Z16 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
-vha
-R5
+vfba_tb
+R4
 !i10b 1
-!s100 NP0K>jNg=HnE8dWjf@0YD1
+!s100 `WON70UNeLKE]RcVMfZ9[1
+R5
+Io;ZBkF<j4b44:3?C@C4Z73
 R6
-IPdmjXg[g8F=6NA9hW`8860
+w1728107167
+8C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v
+!i122 70
+L0 3 10
 R7
 R8
-R9
-R10
-!i122 14
-L0 1 9
-R11
-R12
 r1
 !s85 0
 31
-R13
-R14
-R15
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v|
 !i113 0
-R16
+R10
+R2
+vfourbit_adder
+R4
+!i10b 1
+!s100 [G:dXS:I>f4EJ:YX:hQGe2
+R5
+I7UDGOOi>iYT0?gWgl[OB;0
+R6
+w1728107420
+8C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v
+FC:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v
+!i122 69
+L0 1 13
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v|
+!i113 0
+R10
+R2
+vha
+R4
+!i10b 1
+!s100 NP0K>jNg=HnE8dWjf@0YD1
+R5
+Iam:Abcoj_iML06d[jI3?Q0
+R6
+w1727500376
+8C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v
+!i122 68
+L0 1 9
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v|
+!i113 0
+R10
 R2
 vtb
-R5
+R4
 !i10b 1
-!s100 Lm1gLJe5h2FOoZ48[gbn`2
+!s100 [emVDRfh]MPkzD6be=U4V1
+R5
+IEZW0@bE^mR5U2WYF6ZO9S3
 R6
-IObbMTzOWbgTEDPQ0z_Ye43
-R7
-w1727675773
+w1728104824
 8C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v
 FC:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v
-!i122 15
-L0 3 21
-R11
-R12
+!i122 67
+L0 3 27
+R7
+R8
 r1
 !s85 0
 31
-R13
+R9
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v|
 !i113 0
-R16
+R10
 R2
