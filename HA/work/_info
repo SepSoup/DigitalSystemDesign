@@ -10,11 +10,11 @@ z2
 cModel Technology
 Z0 dD:/Digital System Design/examples
 T_opt
-!s110 1728105358
-VNj5<^B;[kaQ9OV^Ozz:T?3
-04 2 4 work tb fast 0
-=1-fc3497012add-6700cb8e-20-24dc
-Z1 o-quiet -auto_acc_if_foreign -work work +acc
+!s110 1728275832
+VUhNcgnl:ZM6E2hfOcK1XE1
+Z1 04 6 4 work fba_tb fast 0
+=1-fc3497012add-67036578-1c4-55a4
+o-quiet -auto_acc_if_foreign -work work
 Z2 tCvgOpt 0
 n@_opt
 Z3 OL;O;2020.4;71
@@ -24,133 +24,132 @@ T_opt1
 VQ]O:XZEiLDoUK0kAGTRFR3
 04 13 4 work fourbit_adder fast 0
 =1-fc3497012add-6700d320-109-2200
-R1
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
 R2
 n@_opt1
 R3
 R0
 T_opt2
-!s110 1728107182
-VAEk>fJbA1RV7@<jUlmg1l1
-04 6 4 work fba_tb fast 0
-=1-fc3497012add-6700d2ad-377-42ec
+!s110 1728276608
+Vag>^[FJcg?n>JjA0feQ3<0
 R1
+=1-fc3497012add-6703687f-33e-2fd0
+R4
 R2
 n@_opt2
 R3
-R0
 vfa
-Z4 !s110 1728107653
+Z5 !s110 1728276600
 !i10b 1
 !s100 cRN[Q=E>9be@45AFF4I8?2
-Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
 Ic0h@H^6Ui`n2I]LFNTecQ1
-Z6 dC:/Users/Digi Max/Desktop/Digital System Design/HA
+Z7 dC:/Users/Digi Max/Desktop/Digital System Design/HA
 w1728107419
 8C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v
 FC:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v
-!i122 66
+!i122 81
 L0 1 10
-Z7 VDg1SIo80bB@j0V0VzS_@n1
-Z8 OL;L;2020.4;71
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z9 !s108 1728107653.000000
+Z10 !s108 1728276600.000000
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/FA_using_HA.v|
 !i113 0
-Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 vfba_tb
-R4
-!i10b 1
-!s100 `WON70UNeLKE]RcVMfZ9[1
 R5
-Io;ZBkF<j4b44:3?C@C4Z73
+!i10b 1
+!s100 CYoFcaBG5bGFghhBJeP?93
 R6
-w1728107167
+IPP43KIhFRIbJ6k>;05`ee1
+R7
+w1728276587
 8C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v
 FC:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v
-!i122 70
-L0 3 10
-R7
+!i122 85
+L0 3 21
 R8
+R9
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder_tb.v|
 !i113 0
-R10
+R11
 R2
 vfourbit_adder
-R4
+R5
 !i10b 1
 !s100 [G:dXS:I>f4EJ:YX:hQGe2
-R5
-I7UDGOOi>iYT0?gWgl[OB;0
 R6
+I7UDGOOi>iYT0?gWgl[OB;0
+R7
 w1728107420
 8C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v
 FC:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v
-!i122 69
+!i122 84
 L0 1 13
-R7
 R8
+R9
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/4-Bit_Adder.v|
 !i113 0
-R10
+R11
 R2
 vha
-R4
+R5
 !i10b 1
 !s100 NP0K>jNg=HnE8dWjf@0YD1
-R5
-Iam:Abcoj_iML06d[jI3?Q0
 R6
+Iam:Abcoj_iML06d[jI3?Q0
+R7
 w1727500376
 8C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v
 FC:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v
-!i122 68
+!i122 83
 L0 1 9
-R7
 R8
+R9
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/HA.v|
 !i113 0
-R10
+R11
 R2
 vtb
-R4
+R5
 !i10b 1
 !s100 [emVDRfh]MPkzD6be=U4V1
-R5
-IEZW0@bE^mR5U2WYF6ZO9S3
 R6
+IEZW0@bE^mR5U2WYF6ZO9S3
+R7
 w1728104824
 8C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v
 FC:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v
-!i122 67
+!i122 82
 L0 3 27
-R7
 R8
+R9
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/HA/tb.v|
 !i113 0
-R10
+R11
 R2

@@ -1,0 +1,76 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/HA
+T_opt
+!s110 1728279557
+VE_DPbGWk?37hnOUJ0Va:P0
+Z1 04 2 4 work tb fast 0
+=1-fc3497012add-67037404-34f-3d98
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1728279726
+V0``mDS<;N??QM;de5m_P40
+R1
+=1-fc3497012add-670374ae-19d-968
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+vha
+Z4 !s110 1728279692
+!i10b 1
+!s100 TS`UhKPG7mL]99FkA=n:m0
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImcXI;f7C_mQ25Ua8bLC6c2
+Z6 dC:/Users/Digi Max/Desktop/Digital System Design/3state
+w1728279519
+8C:/Users/Digi Max/Desktop/Digital System Design/3state/HA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/3state/HA.v
+!i122 4
+L0 1 13
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1728279692.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/3state/HA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/3state/HA.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb
+R4
+!i10b 1
+!s100 b<QQWb6U_[eHk5ffdNSQD2
+R5
+I[16lPmPKQX]^V4>06Qdl92
+R6
+w1728279673
+8C:/Users/Digi Max/Desktop/Digital System Design/3state/HA_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/3state/HA_tb.v
+!i122 3
+L0 2 20
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/3state/HA_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/3state/HA_tb.v|
+!i113 0
+R10
+R2
