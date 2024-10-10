@@ -1,0 +1,192 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/3state
+T_opt
+!s110 1728590453
+Vc:US?<U;Rc`D>DI?>:Fk12
+Z1 04 6 4 work mux_tb fast 0
+=1-fc3497012add-67083275-169-3a08
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1728590491
+V8LXEVzogo@HL3_`QhJ<FG1
+R1
+=1-fc3497012add-6708329b-4d-4978
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+valu
+Z4 !s110 1728590444
+!i10b 1
+!s100 ZlUZ<;`Fc[_gKFYmoXa:U2
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ic?n20DfggdR;Di3a1ne7I3
+Z6 dC:/Users/Digi Max/Desktop/Digital System Design/ALU
+w1728588239
+8C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v
+FC:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v
+!i122 54
+L0 1 23
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1728590444.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vfa
+R4
+!i10b 1
+!s100 cRN[Q=E>9be@45AFF4I8?2
+R5
+IRARWDmD_c0Q0=::f1h<@M2
+R6
+w1728549463
+8C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v
+!i122 56
+L0 1 10
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v|
+!i113 0
+R10
+R2
+vfourbit_alu
+R4
+!i10b 1
+!s100 SIQ0[mDo;c3a3k[EcD6OM1
+R5
+I5zENI[J>=i2Z9Vda5BiSM3
+R6
+w1728589556
+8C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v
+FC:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v
+!i122 57
+L0 1 26
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v|
+!i113 0
+R10
+R2
+vha
+R4
+!i10b 1
+!s100 NP0K>jNg=HnE8dWjf@0YD1
+R5
+I=k;ZbYinGn<=DEO@@cJBL3
+R6
+w1728549459
+8C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v
+!i122 55
+L0 1 9
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v|
+!i113 0
+R10
+R2
+vMUX
+!s110 1728552848
+!i10b 1
+!s100 Z?AoKjnXzUaK??gLJ@<a^1
+R5
+IVd1VYTN1PeL?VmfRbzO[D1
+R6
+w1728549429
+Z11 8C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux.v
+Z12 FC:/Users/Digi Max/Desktop/Digital System Design/ALU/mux.v
+!i122 7
+Z13 L0 1 16
+R7
+R8
+r1
+!s85 0
+31
+!s108 1728552848.000000
+Z14 !s107 C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux.v|
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux.v|
+!i113 0
+R10
+R2
+n@m@u@x
+vmux
+R4
+!i10b 1
+!s100 UL>Xo]e;2FnooLUhU>fRd3
+R5
+I`^HBhc`3CZHA`m;S;Z`?L3
+R6
+w1728577198
+R11
+R12
+!i122 53
+R13
+R7
+R8
+r1
+!s85 0
+31
+R9
+R14
+R15
+!i113 0
+R10
+R2
+vmux_tb
+R4
+!i10b 1
+!s100 I=KUW4jUK5Z1iT?BcK]QP3
+R5
+IGam;h5DL<HTL`a8ehed>H1
+R6
+w1728590434
+8C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/ALU/mux_tb.v
+!i122 58
+L0 3 21
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux_tb.v|
+!i113 0
+R10
+R2

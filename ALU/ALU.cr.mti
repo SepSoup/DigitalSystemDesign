@@ -1,0 +1,36 @@
+{C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fa
+
+Top level modules:
+	fa
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module ha
+
+Top level modules:
+	ha
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fourbit_alu
+
+Top level modules:
+	fourbit_alu
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}}
