@@ -1,23 +1,23 @@
 module alu( 
     input a,
     input b,
-    input i3,
-    input [1:0] op,
+    input i3,               // SLT
+    input add_sub,          // ADD/SUB
     input cin,
-    output co,
-    output r
+    input [1:0] op,         // Operation
+    output co,              // Carry out
+    output r                // Result
 );
 
-wire [2:0] i ; // mux inputs
-wire outxor ;
+wire out_and, out_or, out_xor, out_fa;
 
-// operations
-and u1(i[0],a,b); // AND
-or u2(i[1],a,b);  // OR
-xor u3(outxor,a,cin);
-fa fa1(a,outxor,cin,co,i[2]); // ADD | SUB
+// Operations :
+and u1(out_and, a, b);        // AND
+or  u2(out_or, a, b);        // OR
+xor u3(out_xor, b, add_sub);
+fa  fa1(a, out_xor, cin, co, out_fa); // ADD | SUB based on cin
 
-// MUX
-mux u4(i,i3,op,r);
+// MUX - Concatenate i3 with the 3-bit i bus
+mux u4({i3,out_fa,out_or,out_and}, op, r);
 
 endmodule

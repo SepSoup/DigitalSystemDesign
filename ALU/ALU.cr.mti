@@ -1,23 +1,38 @@
-{C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA_using_HA.v}
+{C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit_tb.v} {2 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit_tb.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu4_tb
+** Warning: C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit_tb.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	alu4_tb
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU_tb.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU_tb.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_tb
+
+Top level modules:
+	alu_tb
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/FA.v}
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module fa
 
 Top level modules:
 	fa
 
-} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/HA.v}
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux_tb.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/mux_tb.v}
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module ha
+-- Compiling module mux_tb
 
 Top level modules:
-	ha
+	mux_tb
 
 } {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU-4bit.v}
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module fourbit_alu
+-- Compiling module alu4
 
 Top level modules:
-	fourbit_alu
+	alu4
 
 } {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/ALU/ALU.v}
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020

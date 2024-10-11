@@ -1,0 +1,30 @@
+`timescale 1 ns / 1 ps 
+module alu_tb();
+
+reg a = 1'b1;
+reg b = 1'b0;
+reg i3 = 1'b0;
+reg [1:0] op;
+reg cin;
+
+wire co,r; 
+
+alu alu1(a,b,i3,op,cin,co,r);
+
+integer i, j,k;
+
+initial
+begin
+for (i=0;i<=1;i=i+1) begin
+    for(j=0;j<=1;j=j+1) begin
+        for(k=0;k<=1;k=k+1) begin
+            op[1] =i; 
+            op[0]=j; 
+            cin=k;  
+            #5;
+        end
+    end
+end
+end
+
+endmodule

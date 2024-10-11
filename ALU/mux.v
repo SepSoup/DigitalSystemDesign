@@ -1,3 +1,4 @@
+// 4-to-1 Multiplexer
 module mux(
     input [3:0] i, 
     input [1:0] s, 
