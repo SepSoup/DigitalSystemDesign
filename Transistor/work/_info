@@ -1,0 +1,181 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Digi Max/Desktop/Digital System Design/ALU
+T_opt
+!s110 1728711670
+VX=ZoYR4IA0VC2zKVNNSZQ2
+04 5 4 work ha_tb fast 0
+=1-fc3497012add-670a0bf5-30b-5d88
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vand1
+!s110 1728709159
+!i10b 1
+!s100 eAgQBBA2;hCB^I`DZ=n5]3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?FB[G59Qmace3Z5jC?G_g2
+Z2 dC:/Users/Digi Max/Desktop/Digital System Design/Transistor
+w1728709101
+Z3 8C:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_transistors.v
+Z4 FC:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_transistors.v
+!i122 4
+L0 4 20
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+!s108 1728709159.000000
+Z7 !s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_transistors.v|
+Z8 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_transistors.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vand_cmos
+Z10 !s110 1728711658
+!i10b 1
+!s100 b]i5MXS3_U[4Yc>S^[73h2
+R1
+IzBoU968QhW=L20mk5QCI<2
+R2
+w1728711404
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor/and_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor/and_cmos.v
+!i122 9
+L0 1 18
+R5
+R6
+r1
+!s85 0
+31
+Z11 !s108 1728711658.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor/and_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor/and_cmos.v|
+!i113 0
+R9
+R0
+vha
+Z12 !s110 1728711657
+!i10b 1
+!s100 V;K5QVbiLi4NbPkI4ZG]m3
+R1
+IcU5mR;oYAceC2F;7lF<>Z3
+R2
+w1728711172
+R3
+R4
+!i122 6
+L0 5 11
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1728711657.000000
+R7
+R8
+!i113 0
+R9
+R0
+vha_tb
+R12
+!i10b 1
+!s100 ?FG:3R;gI`IHX>]=O]a]:3
+R1
+IZ^D5cJOD[FBI@FOlc=3TV1
+R2
+w1728709138
+Z14 8C:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_tb.v
+Z15 FC:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_tb.v
+!i122 7
+Z16 L0 2 20
+R5
+R6
+r1
+!s85 0
+31
+R13
+Z17 !s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_tb.v|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor/HA_tb.v|
+!i113 0
+R9
+R0
+vnot_cmos
+R10
+!i10b 1
+!s100 `K;30F>HT;c7XCE37gLeg2
+R1
+I`aK[B8FbcGmh]U1dh8[RF3
+R2
+w1728710725
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor/not_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor/not_cmos.v
+!i122 8
+L0 1 10
+R5
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor/not_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor/not_cmos.v|
+!i113 0
+R9
+R0
+vtb
+!s110 1728709105
+!i10b 1
+!s100 b<QQWb6U_[eHk5ffdNSQD2
+R1
+IQ7ihcUD4121=5nV_ADXcX1
+R2
+w1728279673
+R14
+R15
+!i122 3
+R16
+R5
+R6
+r1
+!s85 0
+31
+!s108 1728709105.000000
+R17
+R18
+!i113 0
+R9
+R0
+vxor_cmos
+R10
+!i10b 1
+!s100 6ONTEjQI`;BNk^SoZzh=L2
+R1
+I6z`Qz=P=0Hc]V=LlA>`gD0
+R2
+w1728711608
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor/xor_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor/xor_cmos.v
+!i122 10
+L0 1 25
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor/xor_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor/xor_cmos.v|
+!i113 0
+R9
+R0
