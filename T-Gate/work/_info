@@ -1,0 +1,90 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/Transistor
+T_opt
+!s110 1728884057
+V=m:PDkcmIGJm@TkaCRNJL0
+04 8 4 work mux21_tb fast 0
+=1-fc3497012add-670cad58-3b5-d44
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vmux21
+Z2 !s110 1728884780
+!i10b 1
+!s100 ee^PDP55`1NBQ;<=BRaL22
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=9QP?_?Iji0o9Y[iXc:PE3
+Z4 dC:/Users/Digi Max/Desktop/Digital System Design/T-Gate
+w1728882636
+8C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux21.v
+FC:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux21.v
+!i122 16
+L0 1 16
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1728884780.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux21.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux21.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vmux21_tb
+R2
+!i10b 1
+!s100 =aGWjOIQzGM>5id=f:=AB1
+R3
+IicfHKMe@C]db4PV5E7L8^0
+R4
+w1728884625
+8C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux_tb.v
+!i122 18
+L0 2 37
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/mux_tb.v|
+!i113 0
+R8
+R1
+vnot_cmos
+R2
+!i10b 1
+!s100 @mnfL_3M6_D=N9B]35?W92
+R3
+Ij0Fj8G[`C:I<J?Fd6I5NQ3
+R4
+w1728881492
+8C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/not_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/T-Gate/not_cmos.v
+!i122 17
+L0 1 12
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/not_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/T-Gate/not_cmos.v|
+!i113 0
+R8
+R1
