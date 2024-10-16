@@ -1,0 +1,362 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder
+T_opt
+!s110 1729114945
+VT?RQHo]Fk7_3Y]cRkC8lI1
+04 6 4 work mux_tb fast 0
+=1-fc3497012add-67103340-2c0-636c
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1729115954
+V7JXFXm8N;43>M6^khFS1?2
+04 6 4 work alu_tb fast 0
+=1-fc3497012add-67103732-132-4b18
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1729116541
+VMn:g@:6c<e?_Ak`MZ41G`0
+04 7 4 work alu4_tb fast 0
+=1-fc3497012add-6710397d-283-4d64
+R1
+R2
+n@_opt2
+R3
+valu
+Z4 !s110 1729116534
+!i10b 1
+!s100 V`JB]RO>IehHB7e3098P<1
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQn`;3_JdeE6eQ==<C1;^70
+Z6 dC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU
+w1729115937
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU.v
+!i122 55
+L0 1 23
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1729116534.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valu4
+R4
+!i10b 1
+!s100 GRcHl70neb>L00Ni]BM961
+R5
+IZ`lC@NIoHWb>G0`>5fNC<1
+R6
+w1729116525
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit.v
+!i122 57
+L0 1 24
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit.v|
+!i113 0
+R10
+R2
+valu4_tb
+R4
+!i10b 1
+!s100 ;5Z`jf<aPFODTN`Aj[>>`1
+R5
+I0RAP0@:Fz=6NAnk[h]:eg3
+R6
+w1728678103
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v
+!i122 58
+L0 2 73
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v|
+!i113 0
+R10
+R2
+valu_tb
+R4
+!i10b 1
+!s100 <E>9^P5LY<D^B:A^9li;I2
+R5
+I7gN:ZjKBe7ZM7Q=EP_iSk3
+R6
+w1728679318
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU_tb.v
+!i122 56
+L0 2 60
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU_tb.v|
+!i113 0
+R10
+R2
+vand3_cmos
+Z11 !s110 1729116535
+!i10b 1
+!s100 W[RBePji9OOVI0ZRl]J1P0
+R5
+IF[8_?b^J@9Jh2HilnRdaO1
+R6
+w1729113435
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and3_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and3_cmos.v
+!i122 60
+Z12 L0 1 21
+R7
+R8
+r1
+!s85 0
+31
+Z13 !s108 1729116535.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and3_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and3_cmos.v|
+!i113 0
+R10
+R2
+vand_cmos
+R11
+!i10b 1
+!s100 b]i5MXS3_U[4Yc>S^[73h2
+R5
+IR[Y@ZX2X:BKGVmTE4MF=<0
+R6
+w1728711404
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and_cmos.v
+!i122 59
+Z14 L0 1 18
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and_cmos.v|
+!i113 0
+R10
+R2
+vfa
+R11
+!i10b 1
+!s100 `a1@QHL;[jYRfIb7n1ShG2
+R5
+IUGmCPXNhV>[P::N47LFbm2
+R6
+w1729113179
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/FA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/FA.v
+!i122 61
+L0 1 12
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/FA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/FA.v|
+!i113 0
+R10
+R2
+vmux
+R11
+!i10b 1
+!s100 zCOVFaA^cb:CfE[YRf8`c0
+R5
+ICHkioNXEG;7OBIbBh3_Zn1
+R6
+w1729114836
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux.v
+!i122 62
+L0 2 22
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux.v|
+!i113 0
+R10
+R2
+vmux_tb
+R11
+!i10b 1
+!s100 I=KUW4jUK5Z1iT?BcK]QP3
+R5
+IC>`?:bC=K@cLXR<clbBF=0
+R6
+w1728591323
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux_tb.v
+!i122 63
+L0 3 21
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux_tb.v|
+!i113 0
+R10
+R2
+vnor4_cmos
+R11
+!i10b 1
+!s100 ^_ll3VVoC_fAFPT7aEb4l2
+R5
+I>9AGP94XeH_aN0`icCnYS3
+R6
+w1729116438
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/nor4_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/nor4_cmos.v
+!i122 68
+R12
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/nor4_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/nor4_cmos.v|
+!i113 0
+R10
+R2
+vnot_cmos
+R11
+!i10b 1
+!s100 `K;30F>HT;c7XCE37gLeg2
+R5
+I[93d=5aOiP43cbYoD3_<o3
+R6
+w1729114241
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/not_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/not_cmos.v
+!i122 64
+L0 1 10
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/not_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/not_cmos.v|
+!i113 0
+R10
+R2
+vor4_cmos
+R11
+!i10b 1
+!s100 Mgc:RLnA_UW5mUz1mm_Gi1
+R5
+IFgAN1Q8GHzU5jPK>_;N2U3
+R6
+w1729113792
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or4_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or4_cmos.v
+!i122 66
+L0 1 22
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or4_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or4_cmos.v|
+!i113 0
+R10
+R2
+vor_cmos
+R11
+!i10b 1
+!s100 U1P9Hc14NoVe2ZGFcDAVN3
+R5
+IA[9DQQZbzZ^b`[WNic:Y80
+R6
+w1729113813
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or_cmos.v
+!i122 65
+R14
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or_cmos.v|
+!i113 0
+R10
+R2
+vxor_cmos
+R11
+!i10b 1
+!s100 6ONTEjQI`;BNk^SoZzh=L2
+R5
+IFBlF0<`3^hf^7I391G<Zz0
+R6
+w1728711608
+8C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/xor_cmos.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/xor_cmos.v
+!i122 67
+L0 1 25
+R7
+R8
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/xor_cmos.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/xor_cmos.v|
+!i113 0
+R10
+R2

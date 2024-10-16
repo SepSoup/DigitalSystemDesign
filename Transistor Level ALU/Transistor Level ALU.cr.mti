@@ -1,0 +1,100 @@
+{C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or4_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or4_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module or4_cmos
+
+Top level modules:
+	or4_cmos
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v} {2 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu4_tb
+** Warning: C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit_tb.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	alu4_tb
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and3_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and3_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module and3_cmos
+
+Top level modules:
+	and3_cmos
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/not_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/not_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module not_cmos
+
+Top level modules:
+	not_cmos
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/or_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module or_cmos
+
+Top level modules:
+	or_cmos
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU_tb.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU_tb.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_tb
+
+Top level modules:
+	alu_tb
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/FA.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/FA.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fa
+
+Top level modules:
+	fa
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux_tb.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/mux_tb.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module mux_tb
+
+Top level modules:
+	mux_tb
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/ALU-4bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu4
+
+Top level modules:
+	alu4
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/xor_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/xor_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module xor_cmos
+
+Top level modules:
+	xor_cmos
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/nor4_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/nor4_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module nor4_cmos
+
+Top level modules:
+	nor4_cmos
+
+} {} {}} {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and_cmos.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Digi Max/Desktop/Digital System Design/Transistor Level ALU/and_cmos.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module and_cmos
+
+Top level modules:
+	and_cmos
+
+} {} {}}
