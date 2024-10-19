@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder
+T_opt
+!s110 1729314851
+V2P?DRie0bWznCOTK3FQ2D1
+04 2 4 work tb fast 0
+=1-fc3497012add-67134023-293-2b94
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vbtg
+Z1 !s110 1729314844
+!i10b 1
+!s100 F>ZP@VHQmk_S`92aK3md90
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I8TgG7iP7`[o8OlM<8:NC53
+Z3 dC:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey
+w1729314556
+8C:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/BTG.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/BTG.v
+!i122 0
+L0 1 30
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1729314844.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/BTG.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/BTG.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vtb
+R1
+!i10b 1
+!s100 T]:UO9W9Zl3NSmP[13o>Q3
+R2
+I[gKK==;m=e>;]QSbi5CTL2
+R3
+w1729314790
+8C:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/btg_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/btg_tb.v
+!i122 1
+L0 3 30
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/btg_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey/btg_tb.v|
+!i113 0
+R7
+R0
