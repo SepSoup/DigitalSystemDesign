@@ -9,26 +9,81 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/Digi Max/Desktop/Digital System Design/T-Gate
+T_opt
+!s110 1729314044
+VmKGMG<oYecXG0z3P^iz`D1
+04 2 4 work tb fast 0
+=1-fc3497012add-67133cfb-2f7-53ac
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
 vbfa
-!s110 1729313024
+Z1 !s110 1729314038
 !i10b 1
 !s100 JQMD8C;04Jd@o<X3F3JnY3
-!s11b Dg1SIo80bB@j0V0VzS_@n1
-IhA?aTjWe8GIJCNQM;5h:j0
-dC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder
-w1729313021
-8C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA.v
-FC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA.v
-!i122 0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IM;T:5]77:=HTUL[gokXRZ0
+Z3 dC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder
+w1729313748
+8C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_case.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_case.v
+!i122 7
 L0 1 26
-VDg1SIo80bB@j0V0VzS_@n1
-OL;L;2020.4;71
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
 r1
 !s85 0
 31
-!s108 1729313024.000000
-!s107 C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA.v|
+Z6 !s108 1729314038.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_case.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_case.v|
 !i113 0
-o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-tCvgOpt 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vbfa1
+R1
+!i10b 1
+!s100 f:H2dSA02A[]Cz52G`nVH1
+R2
+IWKC9`V8iK[eVmLVF`aC9M3
+R3
+w1729314006
+8C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_if.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_if.v
+!i122 8
+L0 1 51
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_if.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/BFA_if.v|
+!i113 0
+R7
+R0
+vtb
+R1
+!i10b 1
+!s100 DFl9_kC8RD;^WkbB7:jUG1
+R2
+I@WRL3^;U97a6bEdiWPbbG2
+R3
+w1729314032
+8C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/bfa_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/bfa_tb.v
+!i122 9
+L0 3 25
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/bfa_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Behavioral Full Adder/bfa_tb.v|
+!i113 0
+R7
+R0

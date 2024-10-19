@@ -1,6 +1,6 @@
 module bfa(
     input a , b , c,
-    output reg~ cout , s 
+    output reg cout , s 
     // we use reg because cout and s are valued based on behavoioral modeling
     // wires are used for structual modeling.
 );

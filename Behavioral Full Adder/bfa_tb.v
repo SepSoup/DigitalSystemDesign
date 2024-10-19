@@ -5,7 +5,7 @@ module tb();
 reg a,b,cin; 
 wire co,s; 
 
-bfa fa1(a,b,cin,co,s);
+bfa1 fa1(a,b,cin,co,s);
 
 integer i;
 initial 
