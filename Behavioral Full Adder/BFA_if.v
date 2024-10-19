@@ -10,37 +10,37 @@ begin
         cout = 0;
         s = 0;
     end
-    if (a == 0 && b == 0 && c == 1)
+    else if (a == 0 && b == 0 && c == 1)
     begin
         cout = 0;
         s = 1;
     end
-    if (a == 0 && b == 1 && c == 0)
+    else if (a == 0 && b == 1 && c == 0)
     begin
         cout = 0;
         s = 1;
     end
-    if (a == 0 && b == 1 && c == 1)
+    else if (a == 0 && b == 1 && c == 1)
     begin
         cout = 1;
         s = 0;
     end
-    if (a == 1 && b == 0 && c == 0)
+    else if (a == 1 && b == 0 && c == 0)
     begin
         cout = 0;
         s = 1;
     end
-    if (a == 1 && b == 0 && c == 1)
+    else if (a == 1 && b == 0 && c == 1)
     begin
         cout = 1;
         s = 0;
     end
-    if (a == 1 && b == 1 && c == 0)
+    else if (a == 1 && b == 1 && c == 0)
     begin
         cout = 1;
         s = 0;
     end
-    if (a == 1 && b == 1 && c == 1)
+    else if (a == 1 && b == 1 && c == 1)
     begin
         cout = 1;
         s = 1;

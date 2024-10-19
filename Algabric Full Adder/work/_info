@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Digi Max/Desktop/Digital System Design/Binary to Grey
+T_opt
+!s110 1729316561
+VVR6aMbh5MBmRLh9I38P8Q2
+04 6 4 work afa_tb fast 0
+=1-fc3497012add-671346d1-2cd-67c
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vafa
+Z1 !s110 1729316555
+!i10b 1
+!s100 fb=[4kG2LkJB=ZT=GLDjN0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IdzX<aDMb6]TSOCO6HRCL@1
+Z3 dC:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder
+w1729316552
+8C:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/AFA.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/AFA.v
+!i122 1
+L0 1 12
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1729316555.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/AFA.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/AFA.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vafa_tb
+R1
+!i10b 1
+!s100 PD7E2CoOWC^FhL4n9o59C3
+R2
+IZLR7jN3342z^UKR:5]^9d2
+R3
+w1729316444
+8C:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/bfa_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/bfa_tb.v
+!i122 2
+L0 3 25
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/bfa_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Algabric Full Adder/bfa_tb.v|
+!i113 0
+R7
+R0
