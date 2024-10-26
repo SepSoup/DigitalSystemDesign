@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Digi Max/Desktop/Digital System Design/Algabric ALU
+T_opt
+!s110 1729920194
+Vc<Wz8KCMcO03^EFG246Ik1
+04 10 4 work counter_tb fast 0
+=1-fc3497012add-671c7cc2-189-790
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vcounter
+Z1 !s110 1729920188
+!i10b 1
+!s100 bN_YQgB3U4P7_=cicb[]b2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IVcQlhTJ0F6<oUMz`2XBPE1
+Z3 dC:/Users/Digi Max/Desktop/Digital System Design/Counter
+w1729920171
+8C:/Users/Digi Max/Desktop/Digital System Design/Counter/counter.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Counter/counter.v
+!i122 6
+L0 3 111
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1729920188.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Counter/counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Counter/counter.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vcounter_tb
+R1
+!i10b 1
+!s100 4j`<IUF`ePdC1KIMfGR2e2
+R2
+I>ZOz9eb<PL=CI3Icid5IP1
+R3
+w1729919832
+8C:/Users/Digi Max/Desktop/Digital System Design/Counter/counter_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Counter/counter_tb.v
+!i122 7
+L0 3 18
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Counter/counter_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Counter/counter_tb.v|
+!i113 0
+R7
+R0
