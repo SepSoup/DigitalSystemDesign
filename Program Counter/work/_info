@@ -1,0 +1,77 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/Counter
+T_opt
+!s110 1730091373
+V>aZ@:H6D0L=0GGz=XBBGk0
+04 2 4 work pc fast 0
+=1-fc3497012add-671f196c-34d-11a8
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+Z2 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1730092092
+Vm4]fY?=XKE:GSfJlV><1H3
+04 10 4 work counter_tb fast 0
+=1-fc3497012add-671f1c3c-2a1-6298
+o-quiet -auto_acc_if_foreign -work work +acc
+R1
+n@_opt1
+R2
+R0
+vcounter_tb
+Z3 !s110 1730092174
+!i10b 1
+!s100 S[QB1hXg95z96>:Q8=b2P0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I9B>=mk[Hcf1]F]EJ=hNa[0
+Z5 dC:/Users/Digi Max/Desktop/Digital System Design/Program Counter
+w1730092160
+8C:/Users/Digi Max/Desktop/Digital System Design/Program Counter/counter_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Program Counter/counter_tb.v
+!i122 12
+L0 3 18
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1730092174.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Program Counter/counter_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Program Counter/counter_tb.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vpc
+R3
+!i10b 1
+!s100 If_IYje4S7aE]VLaY7X9Y3
+R4
+ICAkCSU@cK_2f`Ac=8WQKJ3
+R5
+w1730092076
+8C:/Users/Digi Max/Desktop/Digital System Design/Program Counter/PC.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Program Counter/PC.v
+!i122 11
+L0 3 26
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Program Counter/PC.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Program Counter/PC.v|
+!i113 0
+R9
+R1
