@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Digi Max/Desktop/Digital System Design/Pager
+T_opt
+!s110 1730524539
+VEVZ1Bi1XKMZZbkBL]89OE1
+04 7 4 work fact_tb fast 0
+=1-fc3497012add-6725b57b-154-4078
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vfact
+Z1 !s110 1730524535
+!i10b 1
+!s100 9eR]ijHM<g^MMGcC:Hd5[1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ie5=bIfG5bHbQC0N48O[`50
+Z3 dC:/Users/Digi Max/Desktop/Digital System Design/Factorial
+w1730524523
+8C:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v
+!i122 8
+L0 1 21
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1730524535.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vfact_tb
+R1
+!i10b 1
+!s100 meAk3?mlQN0^;j<E0B5622
+R2
+IdVg8]XMBol6SZMWK]GEJT2
+R3
+w1730524529
+8C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v
+!i122 7
+L0 3 30
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v|
+!i113 0
+R7
+R0
