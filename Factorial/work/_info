@@ -8,59 +8,115 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/Digi Max/Desktop/Digital System Design/Pager
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/Pager
 T_opt
-!s110 1730524539
-VEVZ1Bi1XKMZZbkBL]89OE1
+!s110 1730525591
+VcH_0XG;5iF=ceb;1LiG^c3
 04 7 4 work fact_tb fast 0
-=1-fc3497012add-6725b57b-154-4078
-o-quiet -auto_acc_if_foreign -work work +acc
-Z0 tCvgOpt 0
+=1-fc3497012add-6725b997-281-6f20
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
 n@_opt
-OL;O;2020.4;71
-vfact
-Z1 !s110 1730524535
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1730526987
+VVo<:l`BSia<[:lPNjDk:F2
+04 10 4 work counter_tb fast 0
+=1-fc3497012add-6725bf0b-22-4498
+R1
+R2
+n@_opt1
+R3
+vcounter
+Z4 !s110 1730526983
 !i10b 1
-!s100 9eR]ijHM<g^MMGcC:Hd5[1
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ie5=bIfG5bHbQC0N48O[`50
-Z3 dC:/Users/Digi Max/Desktop/Digital System Design/Factorial
-w1730524523
-8C:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v
-FC:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v
-!i122 8
-L0 1 21
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2020.4;71
+!s100 5LoZYP3o54cn]L9cT7EEF0
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ICB07aajMJfa68?K9blOkW3
+Z6 dC:/Users/Digi Max/Desktop/Digital System Design/Factorial
+w1730526971
+8C:/Users/Digi Max/Desktop/Digital System Design/1's Counter/Counter.v
+FC:/Users/Digi Max/Desktop/Digital System Design/1's Counter/Counter.v
+!i122 30
+Z7 L0 1 22
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z6 !s108 1730524535.000000
-!s107 C:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Factorial/factorial.v|
+Z10 !s108 1730526983.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/1's Counter/Counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/1's Counter/Counter.v|
 !i113 0
-Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R0
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vcounter_tb
+R4
+!i10b 1
+!s100 `7WU8d6mF?A?oZECeJ9WA2
+R5
+I=[Sh8FNNKHJe?LXg]KV=O2
+R6
+w1730526856
+8C:/Users/Digi Max/Desktop/Digital System Design/1's Counter/counter_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/1's Counter/counter_tb.v
+!i122 31
+Z12 L0 3 30
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/1's Counter/counter_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/1's Counter/counter_tb.v|
+!i113 0
+R11
+R2
+vfact
+Z13 !s110 1730525705
+!i10b 1
+!s100 gMS>BY4YPAfZJ`T]@Oo``0
+R5
+IXgbQ9_BZS7@9J<ZMhVeV70
+R6
+w1730525688
+8C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_funct.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_funct.v
+!i122 18
+R7
+R8
+R9
+r1
+!s85 0
+31
+Z14 !s108 1730525705.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_funct.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_funct.v|
+!i113 0
+R11
+R2
 vfact_tb
-R1
+R13
 !i10b 1
 !s100 meAk3?mlQN0^;j<E0B5622
-R2
+R5
 IdVg8]XMBol6SZMWK]GEJT2
-R3
+R6
 w1730524529
 8C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v
 FC:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v
-!i122 7
-L0 3 30
-R4
-R5
+!i122 17
+R12
+R8
+R9
 r1
 !s85 0
 31
-R6
+R14
 !s107 C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Factorial/fact_tb.v|
 !i113 0
-R7
-R0
+R11
+R2
