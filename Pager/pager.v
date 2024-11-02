@@ -30,8 +30,13 @@ always @(*) begin
     z = 0;
     
     case (current_state)
+
         S0: if (x == 0) next_state = S1;
+            else next_state = S0;
+
         S1: if (x == 0) next_state = S2;
+            else next_state = S0;
+            
         S2: begin
             if (x == 0) begin
                 next_state = S3;
