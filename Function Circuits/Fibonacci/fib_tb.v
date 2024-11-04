@@ -1,11 +1,11 @@
 `timescale 1 ns / 1 ps 
 
-module fact_tb();
+module tb();
 
 reg [3:0] n; 
-wire [31:0] fact_n; 
+wire [15:0] fib_n; 
 
-rec_fact u1(n,fact_n);
+fibonacci u1(n,fib_n);
 
 integer i;
 initial 

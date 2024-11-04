@@ -1,0 +1,76 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Factorial
+T_opt
+!s110 1730698523
+VD4T@9_YP5@jj8`kaJ_T0Q2
+04 2 4 work tb fast 0
+=1-fc3497012add-67285d1b-271-338c
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+T_opt1
+!s110 1730697371
+VTd<Ld2[PV^o7X<ZlH1i2D3
+04 9 4 work fibonacci fast 0
+=1-fc3497012add-6728589b-c2-4d3c
+R1
+R2
+n@_opt1
+R3
+R0
+vfibonacci
+Z4 !s110 1730698518
+!i10b 1
+!s100 XM?:NR8SHTYn3Ya<cW79V2
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IkV2hIhgGNf<Y1z@OoCK341
+Z6 dC:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci
+w1730698442
+8C:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fibonacci.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fibonacci.v
+!i122 26
+L0 1 29
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1730698518.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fibonacci.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fibonacci.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb
+R4
+!i10b 1
+!s100 RUGhMZhSERiL=R[ZQ?cnK3
+R5
+IM`b;SBDM8D`P7_9WzdPQm1
+R6
+w1730698426
+8C:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fib_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fib_tb.v
+!i122 27
+L0 3 30
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fib_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/Function Circuits/Fibonacci/fib_tb.v|
+!i113 0
+R10
+R2
