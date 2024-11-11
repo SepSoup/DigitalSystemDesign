@@ -12,14 +12,16 @@ task automatic fact(
     input [3:0] n,
     output[31:0] fact_n );
 
-integer i;
+reg [31:0] fact0;
 
 begin 
-    fact_n = 1;
     if (n < 2 )
         fact_n = 1;
     else
-        fact_n = fact(n-1) * n;
+    begin
+        fact(n-1,fact0);
+        fact_n = fact0 * n;
+    end
 end
 endtask
 
