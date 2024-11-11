@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Full Adder
+vmux21
+Z0 !s110 1731304390
+!i10b 1
+!s100 ;`J;?>1;Sbib?7J_Q8fYH2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<_PNU`G=QOfT=6a<gUPd01
+Z2 dC:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21
+w1731304215
+8C:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux21.v
+FC:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux21.v
+!i122 1
+L0 1 9
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z5 !s108 1731304390.000000
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux21.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux21.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+vmux_tb
+R0
+!i10b 1
+!s100 X>mRIkV38?J5Oi=SK_S1H3
+R1
+I;5zmidbQ]ZW;DJcYb<O:k0
+R2
+w1731304243
+8C:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux_tb.v
+FC:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux_tb.v
+!i122 0
+L0 3 21
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Digi Max/Desktop/Digital System Design/DataFlow Modeling/Mux21/mux_tb.v|
+!i113 0
+R6
+R7

@@ -1,11 +1,11 @@
 `timescale 1 ns / 1 ps 
 
-module afa_tb();
+module fa_tb();
 
 reg a,b,cin; 
 wire co,s; 
 
-afa fa1(a,b,cin,co,s);
+fa fa1(a,b,cin,co,s);
 
 integer i;
 initial 
