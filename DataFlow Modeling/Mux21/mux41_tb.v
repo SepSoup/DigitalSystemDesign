@@ -6,7 +6,7 @@ reg [3:0] i;
 reg [1:0] s;
 wire f; 
 
-mux21 mux1(i,s,f);
+mux41 mux1(s,i,f);
 
 integer j , k;
 
@@ -16,7 +16,7 @@ begin
 for(j=0;j<=15;j=j+1)
 for(k=0;k<=3;k=k+1)
 begin
-i =j; s=k; #5;
+i = j; s = k; #5;
 end
 end
 
