@@ -1,0 +1,16 @@
+ISim log file
+Running: C:\Users\Olivia\OneDrive\Desktop\sepehr\Compare 15\Compare15\Compare15_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Olivia/OneDrive/Desktop/sepehr/Compare 15/Compare15/Compare15_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /Compare15/clk 0 -radix bin -value 1 -radix bin -time 10 ns -repeat 20 ns -cancel 500 ns
+# isim force add /Compare15/clr 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 500 ns -cancel 500 ns
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

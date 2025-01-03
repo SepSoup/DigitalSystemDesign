@@ -1,0 +1,454 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Reading design: delay_creator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "delay_creator.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "delay_creator"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : delay_creator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf" into library work
+Parsing module <COMP8_HXILINX_delay_creator>.
+Parsing module <CB8CLE_HXILINX_delay_creator>.
+Parsing module <delay_creator>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <delay_creator>.
+
+Elaborating module <CB8CLE_HXILINX_delay_creator>.
+WARNING:HDLCompiler:413 - "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf" Line 59: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <PULLUP>.
+
+Elaborating module <COMP8_HXILINX_delay_creator>.
+
+Elaborating module <FD(INIT=1'b0)>.
+
+Elaborating module <INV>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <delay_creator>.
+    Related source file is "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf".
+    Set property "HU_SET = XLXI_1_0" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_4_1" for instance <XLXI_4>.
+INFO:Xst:3210 - "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf" line 88: Output port <CEO> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf" line 88: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <delay_creator> synthesized.
+
+Synthesizing Unit <CB8CLE_HXILINX_delay_creator>.
+    Related source file is "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf".
+        TERMINAL_COUNT = 8'b11111111
+    Found 8-bit register for signal <Q>.
+    Found 8-bit adder for signal <Q[7]_GND_2_o_add_0_OUT> created at line 59.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <CB8CLE_HXILINX_delay_creator> synthesized.
+
+Synthesizing Unit <COMP8_HXILINX_delay_creator>.
+    Related source file is "F:\University Classes\VHDL\In Class Ex\24-ise_delay_creator\delay_creator\delay_creator.vf".
+    Summary:
+	no macro.
+Unit <COMP8_HXILINX_delay_creator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CB8CLE_HXILINX_delay_creator>.
+The following registers are absorbed into counter <Q>: 1 register on signal <Q>.
+Unit <CB8CLE_HXILINX_delay_creator> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Multiplexers                                         : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <delay_creator> ...
+
+Optimizing unit <CB8CLE_HXILINX_delay_creator> ...
+
+Optimizing unit <COMP8_HXILINX_delay_creator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block delay_creator, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : delay_creator.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 29
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 1
+#      LUT3                        : 9
+#      LUT6                        : 1
+#      MUXCY                       : 7
+#      XORCY                       : 8
+# FlipFlops/Latches                : 9
+#      FD                          : 1
+#      FDCE                        : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+# Others                           : 1
+#      PULLUP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               9  out of  11440     0%  
+ Number of Slice LUTs:                   13  out of   5720     0%  
+    Number used as Logic:                13  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     22
+   Number with an unused Flip Flop:      13  out of     22    59%  
+   Number with an unused LUT:             9  out of     22    40%  
+   Number of fully used LUT-FF pairs:     0  out of     22     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    186     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+XLXI_4/EQ(XLXI_4/EQ<7>:O)          | NONE(*)(XLXI_6)        | 1     |
+c                                  | BUFGP                  | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.494ns (Maximum Frequency: 222.521MHz)
+   Minimum input arrival time before clock: 2.454ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_4/EQ'
+  Clock period: 2.312ns (frequency: 432.507MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.312ns (Levels of Logic = 1)
+  Source:            XLXI_6 (FF)
+  Destination:       XLXI_6 (FF)
+  Source Clock:      XLXI_4/EQ rising
+  Destination Clock: XLXI_4/EQ rising
+
+  Data Path: XLXI_6 to XLXI_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  XLXI_6 (o_OBUF)
+     INV:I->O              1   0.568   0.579  XLXI_7 (XLXN_13)
+     FD:D                      0.102          XLXI_6
+    ----------------------------------------
+    Total                      2.312ns (1.117ns logic, 1.195ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'c'
+  Clock period: 4.494ns (frequency: 222.521MHz)
+  Total number of paths / destination ports: 452 / 16
+-------------------------------------------------------------------------
+Delay:               4.494ns (Levels of Logic = 5)
+  Source:            XLXI_1/Q_2 (FF)
+  Destination:       XLXI_1/Q_0 (FF)
+  Source Clock:      c rising
+  Destination Clock: c rising
+
+  Data Path: XLXI_1/Q_2 to XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.845  Q_2 (Q_2)
+     end scope: 'XLXI_1:Q<2>'
+     begin scope: 'XLXI_4:A<2>'
+     LUT3:I0->O            1   0.205   0.580  EQ<7>_SW0 (N01)
+     LUT6:I5->O           11   0.205   0.883  EQ<7> (EQ)
+     end scope: 'XLXI_4:EQ'
+     begin scope: 'XLXI_1:L'
+     LUT2:I1->O            8   0.205   0.802  _n0017_inv1 (_n0017_inv)
+     FDCE:CE                   0.322          Q_0
+    ----------------------------------------
+    Total                      4.494ns (1.384ns logic, 3.110ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'c'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.454ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       XLXI_1/Q_0 (FF)
+  Destination Clock: c rising
+
+  Data Path: clr to XLXI_1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.802  clr_IBUF (clr_IBUF)
+     begin scope: 'XLXI_1:CLR'
+     FDCE:CLR                  0.430          Q_0
+    ----------------------------------------
+    Total                      2.454ns (1.652ns logic, 0.802ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_4/EQ'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            XLXI_6 (FF)
+  Destination:       o (PAD)
+  Source Clock:      XLXI_4/EQ rising
+
+  Data Path: XLXI_6 to o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  XLXI_6 (o_OBUF)
+     OBUF:I->O                 2.571          o_OBUF (o)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock XLXI_4/EQ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXI_4/EQ      |    2.312|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock c
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+c              |    4.494|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.47 secs
+ 
+--> 
+
+Total memory usage is 4486492 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

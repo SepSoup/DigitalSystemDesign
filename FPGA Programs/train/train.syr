@@ -1,0 +1,638 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: train.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "train.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "train"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : train
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\train\train.v" into library work
+Parsing module <train>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <train>.
+WARNING:HDLCompiler:872 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\train\train.v" Line 62: Using initial value of mem since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\train\train.v" Line 110: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\train\train.v" Line 112: Result of 32-bit expression is truncated to fit in 3-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <train>.
+    Related source file is "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\train\train.v".
+    Found 1-bit register for signal <clk_user>.
+    Found 32-bit register for signal <counter3>.
+    Found 1-bit register for signal <clk_button>.
+    Found 6-bit register for signal <en>.
+    Found 8-bit register for signal <sseg>.
+    Found 3-bit register for signal <flag>.
+    Found 32-bit register for signal <forward>.
+    Found 32-bit register for signal <xclock>.
+    Found 32-bit register for signal <counter1>.
+    Found 32-bit subtractor for signal <xclock[31]_GND_1_o_sub_49_OUT> created at line 125.
+    Found 32-bit adder for signal <counter1[31]_GND_1_o_add_2_OUT> created at line 33.
+    Found 32-bit adder for signal <counter3[31]_GND_1_o_add_7_OUT> created at line 45.
+    Found 3-bit adder for signal <flag[2]_GND_1_o_add_32_OUT> created at line 110.
+    Found 32-bit adder for signal <xclock[31]_GND_1_o_add_45_OUT> created at line 123.
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_34_OUT<2:0>> created at line 112.
+    Found 32-bit comparator greater for signal <n0000> created at line 27
+    Found 32-bit comparator greater for signal <n0008> created at line 39
+    Found 3-bit comparator greater for signal <n0035> created at line 113
+    Found 3-bit comparator greater for signal <n0037> created at line 115
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 147 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <train> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 3-bit addsub                                          : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 4
+ 3-bit comparator greater                              : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 32-bit 2-to-1 multiplexer                             : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <forward_31> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_30> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_29> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_28> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_27> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_26> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_25> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_24> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_23> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_22> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_21> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_20> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_19> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_18> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_17> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_16> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_15> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_14> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_13> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_12> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_11> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_10> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_9> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_8> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_7> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_6> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_5> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_4> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_3> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_2> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_1> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <train>.
+The following registers are absorbed into counter <counter3>: 1 register on signal <counter3>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+The following registers are absorbed into counter <flag>: 1 register on signal <flag>.
+Unit <train> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 3-bit addsub                                          : 1
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+# Counters                                             : 3
+ 3-bit updown counter                                  : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+# Comparators                                          : 4
+ 3-bit comparator greater                              : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 32-bit 2-to-1 multiplexer                             : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <forward_31> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_30> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_29> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_28> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_27> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_26> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_25> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_24> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_23> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_22> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_21> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_20> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_19> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_18> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_17> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_16> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_15> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_14> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_13> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_12> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_11> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_10> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_9> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_8> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_7> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_6> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_5> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_4> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_3> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_2> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <forward_1> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <xclock_0> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <xclock_1> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <xclock_2> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <xclock_3> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <xclock_4> has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_0> (without init value) has a constant value of 1 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_1> (without init value) has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_2> (without init value) has a constant value of 0 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_3> (without init value) has a constant value of 1 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_4> (without init value) has a constant value of 1 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_5> (without init value) has a constant value of 1 in block <train>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_6> (without init value) has a constant value of 1 in block <train>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <train> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block train, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : train.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 458
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 89
+#      LUT2                        : 15
+#      LUT3                        : 32
+#      LUT4                        : 32
+#      LUT5                        : 8
+#      MUXCY                       : 136
+#      VCC                         : 1
+#      XORCY                       : 118
+# FlipFlops/Latches                : 104
+#      FD                          : 33
+#      FDE                         : 7
+#      FDR                         : 64
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 2
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             104  out of  11440     0%  
+ Number of Slice LUTs:                  202  out of   5720     3%  
+    Number used as Logic:               202  out of   5720     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    202
+   Number with an unused Flip Flop:      98  out of    202    48%  
+   Number with an unused LUT:             0  out of    202     0%  
+   Number of fully used LUT-FF pairs:   104  out of    202    51%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    186     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_button                         | BUFG                   | 27    |
+clk_user                           | NONE(en_0)             | 11    |
+clk                                | BUFGP                  | 66    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.172ns (Maximum Frequency: 239.673MHz)
+   Minimum input arrival time before clock: 5.143ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_button'
+  Clock period: 4.172ns (frequency: 239.673MHz)
+  Total number of paths / destination ports: 5547 / 27
+-------------------------------------------------------------------------
+Delay:               4.172ns (Levels of Logic = 31)
+  Source:            xclock_5 (FF)
+  Destination:       xclock_31 (FF)
+  Source Clock:      clk_button rising
+  Destination Clock: clk_button rising
+
+  Data Path: xclock_5 to xclock_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.651  xclock_5 (xclock_5)
+     LUT2:I1->O            1   0.205   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_lut<5> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_lut<5>)
+     MUXCY:S->O            1   0.172   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<5> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<6> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<7> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<8> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<9> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<10> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<11> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<12> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<13> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<14> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<15> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<16> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<17> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<18> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<19> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<20> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<21> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<22> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<23> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<24> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<25> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<26> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<27> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<28> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<29> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<29>)
+     XORCY:CI->O           2   0.180   0.616  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_xor<30> (xclock[31]_xclock[31]_mux_46_OUT<30>)
+     INV:I->O              1   0.206   0.000  Msub_xclock[31]_GND_1_o_sub_49_OUT_lut<30>_INV_0 (Msub_xclock[31]_GND_1_o_sub_49_OUT_lut<30>)
+     MUXCY:S->O            0   0.172   0.000  Msub_xclock[31]_GND_1_o_sub_49_OUT_cy<30> (Msub_xclock[31]_GND_1_o_sub_49_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.580  Msub_xclock[31]_GND_1_o_sub_49_OUT_xor<31> (xclock[31]_GND_1_o_sub_49_OUT<31>)
+     LUT3:I2->O            1   0.205   0.000  Mmux_xclock[31]_xclock[31]_mux_49_OUT251 (xclock[31]_xclock[31]_mux_49_OUT<31>)
+     FD:D                      0.102          xclock_31
+    ----------------------------------------
+    Total                      4.172ns (2.325ns logic, 1.847ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_user'
+  Clock period: 2.804ns (frequency: 356.583MHz)
+  Total number of paths / destination ports: 49 / 18
+-------------------------------------------------------------------------
+Delay:               2.804ns (Levels of Logic = 1)
+  Source:            flag_0 (FF)
+  Destination:       en_0 (FF)
+  Source Clock:      clk_user rising
+  Destination Clock: clk_user rising
+
+  Data Path: flag_0 to en_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.058  flag_0 (flag_0)
+     LUT3:I0->O            7   0.205   0.773  _n0116_inv1 (_n0116_inv)
+     FDE:CE                    0.322          en_0
+    ----------------------------------------
+    Total                      2.804ns (0.974ns logic, 1.830ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.925ns (frequency: 254.800MHz)
+  Total number of paths / destination ports: 4787 / 130
+-------------------------------------------------------------------------
+Delay:               3.925ns (Levels of Logic = 15)
+  Source:            counter1_4 (FF)
+  Destination:       counter1_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: counter1_4 to counter1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.879  counter1_4 (counter1_4)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_n0000_lut<2> (Mcompar_n0000_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0000_cy<2> (Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<3> (Mcompar_n0000_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<4> (Mcompar_n0000_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<5> (Mcompar_n0000_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<6> (Mcompar_n0000_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<7> (Mcompar_n0000_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<8> (Mcompar_n0000_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<9> (Mcompar_n0000_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<10> (Mcompar_n0000_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<11> (Mcompar_n0000_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<12> (Mcompar_n0000_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<13> (Mcompar_n0000_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0000_cy<14> (Mcompar_n0000_cy<14>)
+     MUXCY:CI->O          33   0.258   1.305  Mcompar_n0000_cy<15> (Mcompar_n0000_cy<15>)
+     FDR:R                     0.430          counter1_0
+    ----------------------------------------
+    Total                      3.925ns (1.740ns logic, 2.185ns route)
+                                       (44.3% logic, 55.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_button'
+  Total number of paths / destination ports: 1678 / 27
+-------------------------------------------------------------------------
+Offset:              5.143ns (Levels of Logic = 32)
+  Source:            key1 (PAD)
+  Destination:       xclock_31 (FF)
+  Destination Clock: clk_button rising
+
+  Data Path: key1 to xclock_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.222   0.849  key1_IBUF (key1_IBUF)
+     LUT2:I0->O            1   0.203   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_lut<5> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_lut<5>)
+     MUXCY:S->O            1   0.172   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<5> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<6> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<7> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<8> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<9> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<10> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<11> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<12> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<13> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<14> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<15> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<16> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<17> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<18> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<19> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<20> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<21> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<22> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<23> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<24> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<25> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<26> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<27> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<28> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<29> (Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_cy<29>)
+     XORCY:CI->O           2   0.180   0.616  Mmux_xclock[31]_xclock[31]_mux_46_OUT_rs_xor<30> (xclock[31]_xclock[31]_mux_46_OUT<30>)
+     INV:I->O              1   0.206   0.000  Msub_xclock[31]_GND_1_o_sub_49_OUT_lut<30>_INV_0 (Msub_xclock[31]_GND_1_o_sub_49_OUT_lut<30>)
+     MUXCY:S->O            0   0.172   0.000  Msub_xclock[31]_GND_1_o_sub_49_OUT_cy<30> (Msub_xclock[31]_GND_1_o_sub_49_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.580  Msub_xclock[31]_GND_1_o_sub_49_OUT_xor<31> (xclock[31]_GND_1_o_sub_49_OUT<31>)
+     LUT3:I2->O            1   0.205   0.000  Mmux_xclock[31]_xclock[31]_mux_49_OUT251 (xclock[31]_xclock[31]_mux_49_OUT<31>)
+     FD:D                      0.102          xclock_31
+    ----------------------------------------
+    Total                      5.143ns (3.098ns logic, 2.045ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_user'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            sseg_7 (FF)
+  Destination:       sseg<7> (PAD)
+  Source Clock:      clk_user rising
+
+  Data Path: sseg_7 to sseg<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  sseg_7 (sseg_7)
+     OBUF:I->O                 2.571          sseg_7_OBUF (sseg<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.925|         |         |         |
+clk_button     |    3.923|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_button
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_button     |    4.172|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_user
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |    2.804|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.11 secs
+ 
+--> 
+
+Total memory usage is 4486800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   77 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

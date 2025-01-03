@@ -1,0 +1,884 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: IncreaseDecrease.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "IncreaseDecrease.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "IncreaseDecrease"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : IncreaseDecrease
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\Calculator\calculator.v" into library work
+Parsing module <IncreaseDecrease>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <IncreaseDecrease>.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\Calculator\calculator.v" Line 80: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\Calculator\calculator.v" Line 93: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\Calculator\calculator.v" Line 100: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\Calculator\calculator.v" Line 113: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <IncreaseDecrease>.
+    Related source file is "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\Calculator\calculator.v".
+WARNING:Xst:2999 - Signal 'mem', unconnected in block 'IncreaseDecrease', is tied to its initial value.
+    Found 1-bit register for signal <clk_user>.
+    Found 32-bit register for signal <counter1>.
+    Found 1-bit register for signal <clk_sseg>.
+    Found 6-bit register for signal <en>.
+    Found 8-bit register for signal <sseg>.
+    Found 32-bit register for signal <flag>.
+    Found 32-bit register for signal <res>.
+    Found 32-bit register for signal <number1>.
+    Found 32-bit register for signal <number2>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_1_o_add_2_OUT> created at line 55.
+    Found 32-bit adder for signal <counter1[31]_GND_1_o_add_7_OUT> created at line 69.
+    Found 32-bit adder for signal <flag[31]_GND_1_o_add_36_OUT> created at line 119.
+    Found 32-bit adder for signal <number1[31]_GND_1_o_add_45_OUT> created at line 131.
+    Found 32-bit adder for signal <number2[31]_GND_1_o_add_50_OUT> created at line 139.
+    Found 32-bit adder for signal <number1[31]_number2[31]_add_54_OUT> created at line 145.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem>, simulation mismatch.
+    Found 10x8-bit dual-port Read Only RAM <Mram_mem> for signal <mem>.
+    Found 32-bit comparator greater for signal <n0000> created at line 49
+    Found 32-bit comparator greater for signal <n0008> created at line 63
+    Summary:
+	inferred   2 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 208 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <IncreaseDecrease> synthesized.
+
+Synthesizing Unit <rem_32s_5s>.
+    Related source file is "".
+    Found 32-bit subtractor for signal <a[31]_unary_minus_1_OUT> created at line 0.
+    Found 5-bit subtractor for signal <b[4]_unary_minus_3_OUT> created at line 0.
+    Found 37-bit adder for signal <n2432> created at line 0.
+    Found 37-bit adder for signal <GND_2_o_b[4]_add_5_OUT> created at line 0.
+    Found 36-bit adder for signal <n2436> created at line 0.
+    Found 36-bit adder for signal <GND_2_o_b[4]_add_7_OUT> created at line 0.
+    Found 35-bit adder for signal <n2440> created at line 0.
+    Found 35-bit adder for signal <GND_2_o_b[4]_add_9_OUT> created at line 0.
+    Found 34-bit adder for signal <n2444> created at line 0.
+    Found 34-bit adder for signal <GND_2_o_b[4]_add_11_OUT> created at line 0.
+    Found 33-bit adder for signal <n2448> created at line 0.
+    Found 33-bit adder for signal <GND_2_o_b[4]_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <n2452> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[4]_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <n2456> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <n2460> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <n2464> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <n2468> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <n2472> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <n2476> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <n2480> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <n2484> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <n2488> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <n2492> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <n2496> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <n2500> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <n2504> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <n2508> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <n2512> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <n2516> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <n2520> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <n2524> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <n2528> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <n2532> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <n2536> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <n2540> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_59_OUT> created at line 0.
+    Found 32-bit adder for signal <n2544> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_61_OUT> created at line 0.
+    Found 32-bit adder for signal <n2548> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_63_OUT> created at line 0.
+    Found 32-bit adder for signal <n2552> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_65_OUT> created at line 0.
+    Found 32-bit adder for signal <n2556> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_67_OUT> created at line 0.
+    Found 32-bit adder for signal <n2560> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_2_o_add_69_OUT> created at line 0.
+    Found 5-bit adder for signal <GND_2_o_a[31]_add_70_OUT[4:0]> created at line 0.
+    Found 37-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  69 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 1032 Multiplexer(s).
+Unit <rem_32s_5s> synthesized.
+
+Synthesizing Unit <div_32s_5s>.
+    Related source file is "".
+    Found 32-bit subtractor for signal <a[31]_unary_minus_1_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_5_o_BUS_0001_add_70_OUT[32:0]> created at line 0.
+    Found 37-bit adder for signal <GND_5_o_b[4]_add_5_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_5_o_b[4]_add_7_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_5_o_b[4]_add_9_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_5_o_b[4]_add_11_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_5_o_b[4]_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[4]_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_59_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_61_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_63_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_65_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_5_o_add_67_OUT[31:0]> created at line 0.
+    Found 37-bit comparator greater for signal <BUS_0001_INV_2286_o> created at line 0
+    Found 36-bit comparator greater for signal <BUS_0002_INV_2285_o> created at line 0
+    Found 35-bit comparator greater for signal <BUS_0003_INV_2284_o> created at line 0
+    Found 34-bit comparator greater for signal <BUS_0004_INV_2283_o> created at line 0
+    Found 33-bit comparator greater for signal <BUS_0005_INV_2282_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0006_INV_2281_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0007_INV_2280_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0008_INV_2279_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0009_INV_2278_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0010_INV_2277_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0011_INV_2276_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0012_INV_2275_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0013_INV_2274_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0014_INV_2273_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0015_INV_2272_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0016_INV_2271_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0017_INV_2270_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0018_INV_2269_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0019_INV_2268_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0020_INV_2267_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0021_INV_2266_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0022_INV_2265_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0023_INV_2264_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0024_INV_2263_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0025_INV_2262_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0026_INV_2261_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0027_INV_2260_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0028_INV_2259_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0029_INV_2258_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0030_INV_2257_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0031_INV_2256_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0032_INV_2255_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0033_INV_2254_o> created at line 0
+    Summary:
+	inferred  34 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 933 Multiplexer(s).
+Unit <div_32s_5s> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 10x8-bit dual-port Read Only RAM                      : 2
+# Adders/Subtractors                                   : 178
+ 32-bit adder                                          : 145
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 6
+ 34-bit adder                                          : 5
+ 35-bit adder                                          : 5
+ 36-bit adder                                          : 5
+ 37-bit adder                                          : 5
+ 5-bit adder                                           : 2
+ 5-bit subtractor                                      : 2
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 32-bit register                                       : 6
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 101
+ 32-bit comparator greater                             : 30
+ 32-bit comparator lessequal                           : 56
+ 33-bit comparator greater                             : 1
+ 33-bit comparator lessequal                           : 2
+ 34-bit comparator greater                             : 1
+ 34-bit comparator lessequal                           : 2
+ 35-bit comparator greater                             : 1
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator greater                             : 1
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator greater                             : 1
+ 37-bit comparator lessequal                           : 2
+# Multiplexers                                         : 3008
+ 1-bit 2-to-1 multiplexer                              : 2986
+ 32-bit 2-to-1 multiplexer                             : 10
+ 33-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 5
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <IncreaseDecrease>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <flag>: 1 register on signal <flag>.
+INFO:Xst:3231 - The small RAM <Mram_mem1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0074>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     addrB          | connected to signal <number2<3:0>>  |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <number1<3:0>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     addrB          | connected to signal <n0071>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <IncreaseDecrease> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 10x8-bit dual-port distributed Read Only RAM          : 2
+# Adders/Subtractors                                   : 109
+ 32-bit adder                                          : 35
+ 32-bit adder carry in                                 : 64
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 5-bit adder carry in                                  : 2
+ 5-bit subtractor                                      : 2
+# Counters                                             : 3
+ 32-bit up counter                                     : 3
+# Registers                                            : 112
+ Flip-Flops                                            : 112
+# Comparators                                          : 101
+ 32-bit comparator greater                             : 30
+ 32-bit comparator lessequal                           : 56
+ 33-bit comparator greater                             : 1
+ 33-bit comparator lessequal                           : 2
+ 34-bit comparator greater                             : 1
+ 34-bit comparator lessequal                           : 2
+ 35-bit comparator greater                             : 1
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator greater                             : 1
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator greater                             : 1
+ 37-bit comparator lessequal                           : 2
+# Multiplexers                                         : 3070
+ 1-bit 2-to-1 multiplexer                              : 3050
+ 32-bit 2-to-1 multiplexer                             : 8
+ 33-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 5
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mram_mem9> of sequential type is unconnected in block <IncreaseDecrease>.
+WARNING:Xst:2677 - Node <Mram_mem18> of sequential type is unconnected in block <IncreaseDecrease>.
+WARNING:Xst:1710 - FF/Latch <sseg_7> (without init value) has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <IncreaseDecrease> ...
+WARNING:Xst:1293 - FF/Latch <flag_31> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_30> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_29> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_28> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_27> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_26> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_25> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_24> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_23> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_22> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_21> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_20> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_19> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_18> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_17> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_16> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_15> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_14> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_13> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_12> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_11> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_10> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_9> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_8> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_7> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_6> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_5> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_4> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_3> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block IncreaseDecrease, actual ratio is 96.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 178
+ Flip-Flops                                            : 178
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : IncreaseDecrease.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7455
+#      GND                         : 1
+#      INV                         : 73
+#      LUT1                        : 127
+#      LUT2                        : 38
+#      LUT3                        : 693
+#      LUT4                        : 346
+#      LUT5                        : 1563
+#      LUT6                        : 1237
+#      MUXCY                       : 1729
+#      MUXF7                       : 9
+#      VCC                         : 1
+#      XORCY                       : 1638
+# FlipFlops/Latches                : 178
+#      FD                          : 96
+#      FDE                         : 15
+#      FDR                         : 67
+# RAMS                             : 14
+#      RAM16X1D                    : 14
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 2
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             178  out of  11440     1%  
+ Number of Slice LUTs:                 4105  out of   5720    71%  
+    Number used as Logic:              4077  out of   5720    71%  
+    Number used as Memory:               28  out of   1440     1%  
+       Number used as RAM:               28
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4106
+   Number with an unused Flip Flop:    3928  out of   4106    95%  
+   Number with an unused LUT:             1  out of   4106     0%  
+   Number of fully used LUT-FF pairs:   177  out of   4106     4%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  17  out of    186     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------------+------------------------+-------+
+clk                                                              | BUFGP                  | 66    |
+clk_user                                                         | BUFG                   | 96    |
+clk_sseg                                                         | NONE(en_0)             | 16    |
+res[31]_GND_1_o_rem_15/Madd_a[31]_GND_2_o_add_19_OUT_Madd_lut<31>| NONE(Mram_mem2)        | 14    |
+-----------------------------------------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.907ns (Maximum Frequency: 144.788MHz)
+   Minimum input arrival time before clock: 7.036ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.607ns (frequency: 217.038MHz)
+  Total number of paths / destination ports: 4259 / 132
+-------------------------------------------------------------------------
+Delay:               4.607ns (Levels of Logic = 7)
+  Source:            counter1_7 (FF)
+  Destination:       counter1_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: counter1_7 to counter1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.995  counter1_7 (counter1_7)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_n0008_lut<0> (Mcompar_n0008_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0008_cy<0> (Mcompar_n0008_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<1> (Mcompar_n0008_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<2> (Mcompar_n0008_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<3> (Mcompar_n0008_cy<3>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_n0008_cy<4> (Mcompar_n0008_cy<4>)
+     LUT5:I4->O           33   0.205   1.305  Mcompar_n0008_cy<5> (Mcompar_n0008_cy<5>)
+     FDR:R                     0.430          counter1_0
+    ----------------------------------------
+    Total                      4.607ns (1.727ns logic, 2.880ns route)
+                                       (37.5% logic, 62.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_user'
+  Clock period: 6.907ns (frequency: 144.788MHz)
+  Total number of paths / destination ports: 117636 / 96
+-------------------------------------------------------------------------
+Delay:               6.907ns (Levels of Logic = 44)
+  Source:            number1_0 (FF)
+  Destination:       res_31 (FF)
+  Source Clock:      clk_user rising
+  Destination Clock: clk_user rising
+
+  Data Path: number1_0 to res_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              24   0.447   1.172  number1_0 (number1_0)
+     INV:I->O              1   0.206   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_lut<0>_INV_0 (Madd_number1[31]_GND_1_o_add_45_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<0> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<1> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<2> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<3> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<4> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<5> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_GND_1_o_add_45_OUT_cy<6> (Madd_number1[31]_GND_1_o_add_45_OUT_cy<6>)
+     XORCY:CI->O           4   0.180   0.912  Madd_number1[31]_GND_1_o_add_45_OUT_xor<7> (number1[31]_GND_1_o_add_45_OUT<7>)
+     LUT6:I3->O            1   0.205   0.580  number1[31]_GND_1_o_equal_47_o<31>6_SW0 (N79)
+     LUT6:I5->O            1   0.205   0.684  number1[31]_GND_1_o_equal_47_o<31>7_SW1 (N68)
+     LUT6:I4->O            2   0.203   0.617  mux10115 (n0118<1>)
+     LUT2:I1->O            1   0.205   0.000  Madd_number1[31]_number2[31]_add_54_OUT_lut<1> (Madd_number1[31]_number2[31]_add_54_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<1> (Madd_number1[31]_number2[31]_add_54_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<2> (Madd_number1[31]_number2[31]_add_54_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<3> (Madd_number1[31]_number2[31]_add_54_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<4> (Madd_number1[31]_number2[31]_add_54_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<5> (Madd_number1[31]_number2[31]_add_54_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<6> (Madd_number1[31]_number2[31]_add_54_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<7> (Madd_number1[31]_number2[31]_add_54_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<8> (Madd_number1[31]_number2[31]_add_54_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<9> (Madd_number1[31]_number2[31]_add_54_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<10> (Madd_number1[31]_number2[31]_add_54_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<11> (Madd_number1[31]_number2[31]_add_54_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<12> (Madd_number1[31]_number2[31]_add_54_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<13> (Madd_number1[31]_number2[31]_add_54_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<14> (Madd_number1[31]_number2[31]_add_54_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<15> (Madd_number1[31]_number2[31]_add_54_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<16> (Madd_number1[31]_number2[31]_add_54_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<17> (Madd_number1[31]_number2[31]_add_54_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<18> (Madd_number1[31]_number2[31]_add_54_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<19> (Madd_number1[31]_number2[31]_add_54_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<20> (Madd_number1[31]_number2[31]_add_54_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<21> (Madd_number1[31]_number2[31]_add_54_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<22> (Madd_number1[31]_number2[31]_add_54_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<23> (Madd_number1[31]_number2[31]_add_54_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<24> (Madd_number1[31]_number2[31]_add_54_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<25> (Madd_number1[31]_number2[31]_add_54_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<26> (Madd_number1[31]_number2[31]_add_54_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<27> (Madd_number1[31]_number2[31]_add_54_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<28> (Madd_number1[31]_number2[31]_add_54_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<29> (Madd_number1[31]_number2[31]_add_54_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<30> (Madd_number1[31]_number2[31]_add_54_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.000  Madd_number1[31]_number2[31]_add_54_OUT_xor<31> (number1[31]_number2[31]_add_54_OUT<31>)
+     FD:D                      0.102          res_31
+    ----------------------------------------
+    Total                      6.907ns (2.942ns logic, 3.965ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sseg'
+  Clock period: 3.146ns (frequency: 317.874MHz)
+  Total number of paths / destination ports: 85 / 32
+-------------------------------------------------------------------------
+Delay:               3.146ns (Levels of Logic = 2)
+  Source:            flag_0 (FF)
+  Destination:       sseg_6 (FF)
+  Source Clock:      clk_sseg rising
+  Destination Clock: clk_sseg rising
+
+  Data Path: flag_0 to sseg_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.447   1.362  flag_0 (flag_0)
+     LUT3:I0->O            1   0.205   0.827  Mmux__n01267_SW0 (N4)
+     LUT6:I2->O            1   0.203   0.000  Mmux__n01267 (_n0126<6>)
+     FDE:D                     0.102          sseg_6
+    ----------------------------------------
+    Total                      3.146ns (0.957ns logic, 2.189ns route)
+                                       (30.4% logic, 69.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_user'
+  Total number of paths / destination ports: 1980 / 96
+-------------------------------------------------------------------------
+Offset:              7.036ns (Levels of Logic = 36)
+  Source:            key2 (PAD)
+  Destination:       res_31 (FF)
+  Destination Clock: clk_user rising
+
+  Data Path: key2 to res_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   1.222   1.868  key2_IBUF (key2_IBUF)
+     LUT3:I0->O            2   0.205   0.721  number2[31]_GND_1_o_equal_52_o<31>7_SW0 (N64)
+     LUT6:I4->O            1   0.203   0.684  number2[31]_GND_1_o_equal_52_o<31>7_SW1 (N65)
+     LUT6:I4->O            2   0.203   0.721  mux321111 (n0119<1>)
+     LUT2:I0->O            1   0.203   0.000  Madd_number1[31]_number2[31]_add_54_OUT_lut<1> (Madd_number1[31]_number2[31]_add_54_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<1> (Madd_number1[31]_number2[31]_add_54_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<2> (Madd_number1[31]_number2[31]_add_54_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<3> (Madd_number1[31]_number2[31]_add_54_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<4> (Madd_number1[31]_number2[31]_add_54_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<5> (Madd_number1[31]_number2[31]_add_54_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<6> (Madd_number1[31]_number2[31]_add_54_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<7> (Madd_number1[31]_number2[31]_add_54_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<8> (Madd_number1[31]_number2[31]_add_54_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<9> (Madd_number1[31]_number2[31]_add_54_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<10> (Madd_number1[31]_number2[31]_add_54_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<11> (Madd_number1[31]_number2[31]_add_54_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<12> (Madd_number1[31]_number2[31]_add_54_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<13> (Madd_number1[31]_number2[31]_add_54_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<14> (Madd_number1[31]_number2[31]_add_54_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<15> (Madd_number1[31]_number2[31]_add_54_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<16> (Madd_number1[31]_number2[31]_add_54_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<17> (Madd_number1[31]_number2[31]_add_54_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<18> (Madd_number1[31]_number2[31]_add_54_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<19> (Madd_number1[31]_number2[31]_add_54_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<20> (Madd_number1[31]_number2[31]_add_54_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<21> (Madd_number1[31]_number2[31]_add_54_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<22> (Madd_number1[31]_number2[31]_add_54_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<23> (Madd_number1[31]_number2[31]_add_54_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<24> (Madd_number1[31]_number2[31]_add_54_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<25> (Madd_number1[31]_number2[31]_add_54_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<26> (Madd_number1[31]_number2[31]_add_54_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<27> (Madd_number1[31]_number2[31]_add_54_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<28> (Madd_number1[31]_number2[31]_add_54_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<29> (Madd_number1[31]_number2[31]_add_54_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_number1[31]_number2[31]_add_54_OUT_cy<30> (Madd_number1[31]_number2[31]_add_54_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.000  Madd_number1[31]_number2[31]_add_54_OUT_xor<31> (number1[31]_number2[31]_add_54_OUT<31>)
+     FD:D                      0.102          res_31
+    ----------------------------------------
+    Total                      7.036ns (3.041ns logic, 3.995ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sseg'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            sseg_6 (FF)
+  Destination:       sseg<6> (PAD)
+  Source Clock:      clk_sseg rising
+
+  Data Path: sseg_6 to sseg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  sseg_6 (sseg_6)
+     OBUF:I->O                 2.571          sseg_6_OBUF (sseg<6>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.607|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sseg
+-----------------------------------------------------------------+---------+---------+---------+---------+
+                                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------------+---------+---------+---------+---------+
+clk_sseg                                                         |    3.146|         |         |         |
+clk_user                                                         |  247.620|         |         |         |
+res[31]_GND_1_o_rem_15/Madd_a[31]_GND_2_o_add_19_OUT_Madd_lut<31>|    3.009|         |         |         |
+-----------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_user
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |    6.907|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock res[31]_GND_1_o_rem_15/Madd_a[31]_GND_2_o_add_19_OUT_Madd_lut<31>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |  245.532|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.47 secs
+ 
+--> 
+
+Total memory usage is 4594440 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Olivia/OneDrive/Desktop/sepehr/8 bit Counter/EightBitCounter/EightBitCounter_isim_beh.exe" -prj "C:/Users/Olivia/OneDrive/Desktop/sepehr/8 bit Counter/EightBitCounter/EightBitCounter_beh.prj" "work.EightBitCounter" "work.glbl" 

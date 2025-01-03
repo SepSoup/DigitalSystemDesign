@@ -1,0 +1,114 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Controller.vf
+// /___/   /\     Timestamp : 11/25/2024 08:49:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.vf -w C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.sch
+//Design Name: Controller
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Controller(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Controller(clk, 
+                  clr, 
+                  x, 
+                  z1, 
+                  z2);
+
+    input clk;
+    input clr;
+    input x;
+   output z1;
+   output z2;
+   
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire z1_DUMMY;
+   wire z2_DUMMY;
+   
+   assign z1 = z1_DUMMY;
+   assign z2 = z2_DUMMY;
+   (* HU_SET = "XLXI_1_1" *) 
+   FJKC_HXILINX_Controller  XLXI_1 (.C(clk), 
+                                   .CLR(clr), 
+                                   .J(XLXN_25), 
+                                   .K(XLXN_26), 
+                                   .Q(XLXN_18));
+   (* HU_SET = "XLXI_2_0" *) 
+   FJKC_HXILINX_Controller  XLXI_2 (.C(clk), 
+                                   .CLR(clr), 
+                                   .J(z2_DUMMY), 
+                                   .K(z1_DUMMY), 
+                                   .Q(XLXN_21));
+   AND2  XLXI_3 (.I0(XLXN_21), 
+                .I1(XLXN_23), 
+                .O(XLXN_25));
+   AND2  XLXI_4 (.I0(XLXN_22), 
+                .I1(XLXN_23), 
+                .O(XLXN_26));
+   AND2  XLXI_5 (.I0(XLXN_19), 
+                .I1(x), 
+                .O(z2_DUMMY));
+   AND2  XLXI_6 (.I0(XLXN_18), 
+                .I1(x), 
+                .O(z1_DUMMY));
+   INV  XLXI_7 (.I(x), 
+               .O(XLXN_23));
+   INV  XLXI_12 (.I(XLXN_18), 
+                .O(XLXN_19));
+   INV  XLXI_13 (.I(XLXN_21), 
+                .O(XLXN_22));
+endmodule

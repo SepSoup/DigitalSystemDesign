@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Olivia/OneDrive/Desktop/sepehr/Compare 15/Compare15/Compare15_isim_beh.exe" -prj "C:/Users/Olivia/OneDrive/Desktop/sepehr/Compare 15/Compare15/Compare15_beh.prj" "work.Compare15" "work.glbl" 

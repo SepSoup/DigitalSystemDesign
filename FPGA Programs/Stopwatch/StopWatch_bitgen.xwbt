@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Olivia\OneDrive\Desktop\sepehr\ISE\Stopwatch\StopWatch.ncd
+OUTFILE=C:\Users\Olivia\OneDrive\Desktop\sepehr\ISE\Stopwatch\StopWatch.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=C:\Users\Olivia\OneDrive\Desktop\sepehr\ISE\Stopwatch
+LICENSE=WebPack
+USER_INFO=__0_0_0

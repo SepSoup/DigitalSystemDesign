@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Fetch.vf
+// /___/   /\     Timestamp : 11/30/2024 08:19:54
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "C:/Users/Olivia/OneDrive/Desktop/sepehr/Address Fetch/Fetch/Fetch.vf" -w "C:/Users/Olivia/OneDrive/Desktop/sepehr/Address Fetch/Fetch/Fetch.sch"
+//Design Name: Fetch
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FD8CE_HXILINX_Fetch(Q, C, CE, CLR, D);
+
+   
+   output [7:0]       Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [7:0]       D;
+   
+   reg    [7:0]       Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 8'b0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module ADD8_HXILINX_Fetch (CO, OFL, S, A, B, CI);
+
+
+   output 	      CO;
+   output 	      OFL;
+   output [7:0]       S;
+
+   input  [7:0]       A;
+   input  [7:0]       B;
+   input              CI;
+
+   assign   {CO, S} = A + B + CI;
+   assign   OFL     = ( A[7] & B[7] & (~S[7])) | ((~A[7]) & (~B[7]) & S[7]);
+
+endmodule
+`timescale 1ns / 1ps
+
+module Fetch(C, 
+             clk, 
+             O);
+
+    input C;
+    input clk;
+   output [7:0] O;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire [7:0] XLXN_5;
+   wire [7:0] XLXN_10;
+   wire [7:0] O_DUMMY;
+   
+   assign XLXN_5 = 8'h04;
+   assign O[7:0] = O_DUMMY[7:0];
+   (* HU_SET = "XLXI_1_0" *) 
+   FD8CE_HXILINX_Fetch  XLXI_1 (.C(C), 
+                               .CE(XLXN_2), 
+                               .CLR(clk), 
+                               .D(XLXN_10[7:0]), 
+                               .Q(O_DUMMY[7:0]));
+   (* HU_SET = "XLXI_3_1" *) 
+   ADD8_HXILINX_Fetch  XLXI_3 (.A(XLXN_5[7:0]), 
+                              .B(O_DUMMY[7:0]), 
+                              .CI(XLXN_1), 
+                              .CO(), 
+                              .OFL(), 
+                              .S(XLXN_10[7:0]));
+   PULLUP  XLXI_4 (.O(XLXN_2));
+   PULLDOWN  XLXI_5 (.O(XLXN_1));
+endmodule

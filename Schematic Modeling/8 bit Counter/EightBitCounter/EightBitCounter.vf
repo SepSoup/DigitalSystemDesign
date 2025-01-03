@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : EightBitCounter.vf
+// /___/   /\     Timestamp : 11/30/2024 08:50:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "C:/Users/Olivia/OneDrive/Desktop/sepehr/8 bit Counter/EightBitCounter/EightBitCounter.vf" -w "C:/Users/Olivia/OneDrive/Desktop/sepehr/8 bit Counter/EightBitCounter/EightBitCounter.sch"
+//Design Name: EightBitCounter
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CB8CE_HXILINX_EightBitCounter(CEO, Q, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 8'b1111_1111;
+   
+   output             CEO;
+   output [7:0]       Q;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg   [7:0]        Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 8'b0000_0000;
+	else if (CE)
+	  Q <= Q + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = (Q == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module EightBitCounter(clk, 
+                       clr, 
+                       O);
+
+    input clk;
+    input clr;
+   output [7:0] O;
+   
+   wire XLXN_1;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   CB8CE_HXILINX_EightBitCounter  XLXI_1 (.C(clk), 
+                                         .CE(XLXN_1), 
+                                         .CLR(clr), 
+                                         .CEO(), 
+                                         .Q(O[7:0]), 
+                                         .TC());
+   PULLUP  XLXI_2 (.O(XLXN_1));
+endmodule

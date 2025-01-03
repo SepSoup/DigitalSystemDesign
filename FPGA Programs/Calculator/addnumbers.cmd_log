@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/Calculator/addnumbers.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/Calculator/addnumbers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 addnumbers.ngc addnumbers.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o addnumbers_map.ncd addnumbers.ngd addnumbers.pcf 
+par -w -intstyle ise -ol high -mt off addnumbers_map.ncd addnumbers.ncd addnumbers.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml addnumbers.twx addnumbers.ncd -o addnumbers.twr addnumbers.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f addnumbers.ut addnumbers.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 addnumbers.ngc addnumbers.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o addnumbers_map.ncd addnumbers.ngd addnumbers.pcf 
+par -w -intstyle ise -ol high -mt off addnumbers_map.ncd addnumbers.ncd addnumbers.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml addnumbers.twx addnumbers.ncd -o addnumbers.twr addnumbers.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f addnumbers.ut addnumbers.ncd 

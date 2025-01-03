@@ -1,0 +1,30 @@
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/ISE/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/ISE/BinaryCounter/BinaryCounter.syr" 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/ISE/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/ISE/BinaryCounter/BinaryCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 BinaryCounter.ngc BinaryCounter.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryCounter_map.ncd BinaryCounter.ngd BinaryCounter.pcf 
+par -w -intstyle ise -ol high -mt off BinaryCounter_map.ncd BinaryCounter.ncd BinaryCounter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryCounter.twx BinaryCounter.ncd -o BinaryCounter.twr BinaryCounter.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f BinaryCounter.ut BinaryCounter.ncd 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 BinaryCounter.ngc BinaryCounter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 BinaryCounter.ngc BinaryCounter.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryCounter_map.ncd BinaryCounter.ngd BinaryCounter.pcf 
+par -w -intstyle ise -ol high -mt off BinaryCounter_map.ncd BinaryCounter.ncd BinaryCounter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryCounter.twx BinaryCounter.ncd -o BinaryCounter.twr BinaryCounter.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f BinaryCounter.ut BinaryCounter.ncd 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 BinaryCounter.ngc BinaryCounter.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryCounter_map.ncd BinaryCounter.ngd BinaryCounter.pcf 
+par -w -intstyle ise -ol high -mt off BinaryCounter_map.ncd BinaryCounter.ncd BinaryCounter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryCounter.twx BinaryCounter.ncd -o BinaryCounter.twr BinaryCounter.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f BinaryCounter.ut BinaryCounter.ncd 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Practice/BinaryCounter/BinaryCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-ftg256-3 BinaryCounter.ngc BinaryCounter.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryCounter_map.ncd BinaryCounter.ngd BinaryCounter.pcf 
+par -w -intstyle ise -ol high -mt off BinaryCounter_map.ncd BinaryCounter.ncd BinaryCounter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryCounter.twx BinaryCounter.ncd -o BinaryCounter.twr BinaryCounter.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f BinaryCounter.ut BinaryCounter.ncd 

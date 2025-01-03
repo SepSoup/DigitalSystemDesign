@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Dec 28 18:55:59 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+COMP "sseg<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "sseg<1>" LOCATE = SITE "E6" LEVEL 1;
+COMP "sseg<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "sseg<3>" LOCATE = SITE "F7" LEVEL 1;
+COMP "sseg<4>" LOCATE = SITE "D6" LEVEL 1;
+COMP "sseg<5>" LOCATE = SITE "E7" LEVEL 1;
+COMP "sseg<6>" LOCATE = SITE "D5" LEVEL 1;
+COMP "sseg<7>" LOCATE = SITE "C6" LEVEL 1;
+COMP "en<0>" LOCATE = SITE "D8" LEVEL 1;
+COMP "en<1>" LOCATE = SITE "E8" LEVEL 1;
+COMP "en<2>" LOCATE = SITE "F9" LEVEL 1;
+COMP "en<3>" LOCATE = SITE "F10" LEVEL 1;
+COMP "en<4>" LOCATE = SITE "E10" LEVEL 1;
+COMP "en<5>" LOCATE = SITE "D9" LEVEL 1;
+SCHEMATIC END;
+

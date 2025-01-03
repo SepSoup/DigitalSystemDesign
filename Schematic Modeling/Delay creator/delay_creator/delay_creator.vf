@@ -1,0 +1,106 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : delay_creator.vf
+// /___/   /\     Timestamp : 11/30/2024 02:54:19
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "F:/University Classes/VHDL/In Class Ex/24-ise_delay_creator/delay_creator/delay_creator.vf" -w "F:/University Classes/VHDL/In Class Ex/24-ise_delay_creator/delay_creator/delay_creator.sch"
+//Design Name: delay_creator
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMP8_HXILINX_delay_creator (EQ, A, B);
+    
+
+   output EQ;
+
+   input  [7:0] A;
+   input  [7:0] B;
+
+   assign EQ = (A==B) ;
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB8CLE_HXILINX_delay_creator(CEO, Q, TC, C, CE, CLR, D, L);
+   
+   parameter TERMINAL_COUNT = 8'b1111_1111;
+   
+   output             CEO;
+   output [7:0]       Q;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [7:0]       D;
+   input              L;
+   
+   reg    [7:0]       Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 8'b0000_0000;
+        else if (L)
+          Q <= D;
+	else if (CE)
+	  Q <= Q + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = CLR ? 1'b0 : (Q == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module delay_creator(c, 
+                     clr, 
+                     o);
+
+    input c;
+    input clr;
+   output o;
+   
+   wire [7:0] XLXN_1;
+   wire XLXN_3;
+   wire [7:0] XLXN_7;
+   wire [7:0] XLXN_8;
+   wire XLXN_9;
+   wire XLXN_13;
+   wire o_DUMMY;
+   
+   assign XLXN_1 = 8'h00;
+   assign XLXN_8 = 8'h0F;
+   assign o = o_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   CB8CLE_HXILINX_delay_creator  XLXI_1 (.C(c), 
+                                        .CE(XLXN_3), 
+                                        .CLR(clr), 
+                                        .D(XLXN_1[7:0]), 
+                                        .L(XLXN_9), 
+                                        .CEO(), 
+                                        .Q(XLXN_7[7:0]), 
+                                        .TC());
+   PULLUP  XLXI_3 (.O(XLXN_3));
+   (* HU_SET = "XLXI_4_1" *) 
+   COMP8_HXILINX_delay_creator  XLXI_4 (.A(XLXN_7[7:0]), 
+                                       .B(XLXN_8[7:0]), 
+                                       .EQ(XLXN_9));
+   FD #( .INIT(1'b0) ) XLXI_6 (.C(XLXN_9), 
+              .D(XLXN_13), 
+              .Q(o_DUMMY));
+   INV  XLXI_7 (.I(o_DUMMY), 
+               .O(XLXN_13));
+endmodule

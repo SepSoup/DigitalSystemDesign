@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Nov 25 09:04:10 2024
+# Process ID: 4112
+# Log file: C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Sepehr/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Sepehr/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Sepehr/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/pa.fromNetlist.tcl
+# create_project -name Controller -dir "C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/planAhead_run_1" -part xc6slx9ftg256-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller} }
+# set_property target_constrs_file "Controller.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.ucf' to fileset 'constrs_1'
+# add_files [list {Controller.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx9ftg256-3
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Controller.ngc ...
+WARNING:NetListWriters:298 - No output is written to Controller.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Controller.edif ...
+ngc2edif: Total memory usage is 4311056 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/Controller.data/cache/Controller_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/Controller.data/cache/Controller_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/Sepehr/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from D:/Sepehr/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from D:/Sepehr/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/Sepehr/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ftg256/Package.xml
+Loading io standards from D:/Sepehr/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/Sepehr/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Sepehr/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.ucf]
+Finished Parsing UCF File [C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: ed287270
+link_design: Time (s): elapsed = 00:00:08 . Memory (MB): peak = 653.168 ; gain = 187.578
+startgroup
+set_property package_pin T8 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin C3 [get_ports clr]
+endgroup
+startgroup
+set_property package_pin D3 [get_ports x]
+endgroup
+startgroup
+set_property package_pin E4 [get_ports z1]
+endgroup
+startgroup
+set_property package_pin N5 [get_ports z2]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports z1]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller\planAhead_pid4112.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Nov 25 09:07:42 2024...
+INFO: [Common 17-83] Releasing license: PlanAhead

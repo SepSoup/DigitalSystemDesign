@@ -1,0 +1,10 @@
+Command line:
+   Fetch_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60906
+
+Sat Nov 30 08:21:05 2024
+
+
+ Elaboration Time: 0.078125 sec

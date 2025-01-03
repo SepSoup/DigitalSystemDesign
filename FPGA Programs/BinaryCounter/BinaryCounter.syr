@@ -1,0 +1,621 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: BinaryCounter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BinaryCounter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BinaryCounter"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : BinaryCounter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\BinaryCounter\BinaryCounter.v" into library work
+Parsing module <BinaryCounter>.
+WARNING:HDLCompiler:568 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\BinaryCounter\BinaryCounter.v" Line 58: Constant value is truncated to fit in <4> bits.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <BinaryCounter>.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\BinaryCounter\BinaryCounter.v" Line 71: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <BinaryCounter>.
+    Related source file is "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\BinaryCounter\BinaryCounter.v".
+WARNING:Xst:2999 - Signal 'mem', unconnected in block 'BinaryCounter', is tied to its initial value.
+    Found 1-bit register for signal <clk_user>.
+    Found 32-bit register for signal <counter1>.
+    Found 1-bit register for signal <clk_sseg>.
+    Found 1-bit register for signal <on>.
+    Found 4-bit register for signal <LED>.
+    Found 6-bit register for signal <en>.
+    Found 8-bit register for signal <sseg>.
+    Found 32-bit register for signal <flag>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_1_o_add_1_OUT> created at line 39.
+    Found 32-bit adder for signal <counter1[31]_GND_1_o_add_7_OUT> created at line 55.
+    Found 4-bit adder for signal <LED[3]_GND_1_o_add_13_OUT> created at line 71.
+    Found 32-bit adder for signal <flag[31]_GND_1_o_add_34_OUT> created at line 112.
+WARNING:Xst:3015 - Contents of array <mem> may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
+    Found 2x8-bit dual-port Read Only RAM <Mram_mem> for signal <mem>.
+    Found 4x6-bit Read Only RAM for signal <_n0096>
+    Found 8-bit 4-to-1 multiplexer for signal <_n0099> created at line 91.
+    Found 32-bit comparator greater for signal <n0001> created at line 40
+    Found 32-bit comparator greater for signal <n0008> created at line 49
+    Summary:
+	inferred   3 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 117 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <BinaryCounter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 2x8-bit dual-port Read Only RAM                       : 2
+ 4x6-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 4-bit adder                                           : 1
+# Registers                                            : 9
+ 1-bit register                                        : 3
+ 32-bit register                                       : 3
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BinaryCounter>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <LED>: 1 register on signal <LED>.
+The following registers are absorbed into counter <flag>: 1 register on signal <flag>.
+INFO:Xst:3231 - The small RAM <Mram__n0096> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 6-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <flag<1:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <LED<0>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     addrB          | connected to signal <LED<1>>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <LED<2>>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     addrB          | connected to signal <LED<3>>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <BinaryCounter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 2x8-bit dual-port distributed Read Only RAM           : 2
+ 4x6-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 4
+ 32-bit up counter                                     : 3
+ 4-bit up counter                                      : 1
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch en_5 hinder the constant cleaning in the block BinaryCounter.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch en_4 hinder the constant cleaning in the block BinaryCounter.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:2677 - Node <Mram_mem9> of sequential type is unconnected in block <BinaryCounter>.
+WARNING:Xst:2677 - Node <Mram_mem18> of sequential type is unconnected in block <BinaryCounter>.
+WARNING:Xst:1426 - The value init of the FF/Latch sseg_7 hinder the constant cleaning in the block BinaryCounter.
+   You should achieve better results by setting this init to 0.
+INFO:Xst:2261 - The FF/Latch <en_4> in Unit <BinaryCounter> is equivalent to the following FF/Latch, which will be removed : <en_5> 
+
+Optimizing unit <BinaryCounter> ...
+INFO:Xst:2399 - RAMs <Mram_mem3>, <Mram_mem4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem2>, <Mram_mem5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem2>, <Mram_mem6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem2>, <Mram_mem7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem11>, <Mram_mem14> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem11>, <Mram_mem15> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem11>, <Mram_mem16> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_mem12>, <Mram_mem13> are equivalent, second RAM is removed
+WARNING:Xst:1293 - FF/Latch <flag_31> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_30> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_29> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_28> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_27> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_26> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_25> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_24> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_23> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_22> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_21> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_20> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_19> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_18> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_17> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_16> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_15> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_14> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_13> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_12> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_11> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_10> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_9> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_8> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_7> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_6> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_5> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_4> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_3> has a constant value of 0 in block <BinaryCounter>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sseg_0> in Unit <BinaryCounter> is equivalent to the following 3 FFs/Latches, which will be removed : <sseg_3> <sseg_4> <sseg_5> 
+INFO:Xst:2261 - The FF/Latch <sseg_1> in Unit <BinaryCounter> is equivalent to the following FF/Latch, which will be removed : <sseg_2> 
+INFO:Xst:3203 - The FF/Latch <en_4> in Unit <BinaryCounter> is the opposite to the following FF/Latch, which will be removed : <sseg_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BinaryCounter, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 82
+ Flip-Flops                                            : 82
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : BinaryCounter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 316
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 64
+#      LUT2                        : 70
+#      LUT3                        : 4
+#      LUT4                        : 7
+#      LUT5                        : 13
+#      LUT6                        : 4
+#      MUXCY                       : 76
+#      VCC                         : 1
+#      XORCY                       : 67
+# FlipFlops/Latches                : 82
+#      FD                          : 65
+#      FDE                         : 10
+#      FDR                         : 3
+#      FDRE                        : 4
+# RAMS                             : 6
+#      RAM16X1D                    : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 1
+#      OBUF                        : 18
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              82  out of  11440     0%  
+ Number of Slice LUTs:                  183  out of   5720     3%  
+    Number used as Logic:               171  out of   5720     2%  
+    Number used as Memory:               12  out of   1440     0%  
+       Number used as RAM:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    184
+   Number with an unused Flip Flop:     102  out of    184    55%  
+   Number with an unused LUT:             1  out of    184     0%  
+   Number of fully used LUT-FF pairs:    81  out of    184    44%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    186    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 66    |
+clk_user                           | NONE(on)               | 5     |
+clk_sseg                           | NONE(en_0)             | 11    |
+Mram__n00964                       | NONE(Mram_mem3)        | 6     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.779ns (Maximum Frequency: 264.645MHz)
+   Minimum input arrival time before clock: 3.519ns
+   Maximum output required time after clock: 4.453ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.779ns (frequency: 264.645MHz)
+  Total number of paths / destination ports: 4259 / 68
+-------------------------------------------------------------------------
+Delay:               3.779ns (Levels of Logic = 7)
+  Source:            counter_7 (FF)
+  Destination:       clk_user (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: counter_7 to clk_user
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.995  counter_7 (counter_7)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_n0001_lut<0> (Mcompar_n0001_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0001_cy<0> (Mcompar_n0001_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0001_cy<1> (Mcompar_n0001_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0001_cy<2> (Mcompar_n0001_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0001_cy<3> (Mcompar_n0001_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0001_cy<4> (Mcompar_n0001_cy<4>)
+     MUXCY:CI->O          33   0.258   1.305  Mcompar_n0001_cy<5> (Mcompar_n0001_cy<5>)
+     FDE:CE                    0.322          clk_user
+    ----------------------------------------
+    Total                      3.779ns (1.478ns logic, 2.301ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_user'
+  Clock period: 2.800ns (frequency: 357.143MHz)
+  Total number of paths / destination ports: 35 / 13
+-------------------------------------------------------------------------
+Delay:               2.800ns (Levels of Logic = 1)
+  Source:            LED_2 (FF)
+  Destination:       LED_0 (FF)
+  Source Clock:      clk_user rising
+  Destination Clock: clk_user rising
+
+  Data Path: LED_2 to LED_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            13   0.447   1.037  LED_2 (LED_2)
+     LUT6:I4->O            4   0.203   0.683  _n010211 (_n0102)
+     FDRE:R                    0.430          LED_0
+    ----------------------------------------
+    Total                      2.800ns (1.080ns logic, 1.720ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sseg'
+  Clock period: 2.790ns (frequency: 358.423MHz)
+  Total number of paths / destination ports: 37 / 21
+-------------------------------------------------------------------------
+Delay:               2.790ns (Levels of Logic = 1)
+  Source:            flag_0 (FF)
+  Destination:       flag_0 (FF)
+  Source Clock:      clk_sseg rising
+  Destination Clock: clk_sseg rising
+
+  Data Path: flag_0 to flag_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.447   1.058  flag_0 (flag_0)
+     LUT3:I0->O            3   0.205   0.650  flag[31]_GND_1_o_equal_36_o<31>1 (flag[31]_GND_1_o_equal_36_o)
+     FDR:R                     0.430          flag_0
+    ----------------------------------------
+    Total                      2.790ns (1.082ns logic, 1.708ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_user'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.519ns (Levels of Logic = 2)
+  Source:            key1 (PAD)
+  Destination:       LED_0 (FF)
+  Destination Clock: clk_user rising
+
+  Data Path: key1 to LED_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.981  key1_IBUF (key1_IBUF)
+     LUT6:I0->O            4   0.203   0.683  _n010211 (_n0102)
+     FDRE:R                    0.430          LED_0
+    ----------------------------------------
+    Total                      3.519ns (1.855ns logic, 1.664ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_user'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.999ns (Levels of Logic = 1)
+  Source:            LED_0 (FF)
+  Destination:       LED<0> (PAD)
+  Source Clock:      clk_user rising
+
+  Data Path: LED_0 to LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            15   0.447   0.981  LED_0 (LED_0)
+     OBUF:I->O                 2.571          LED_0_OBUF (LED<0>)
+    ----------------------------------------
+    Total                      3.999ns (3.018ns logic, 0.981ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sseg'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              4.453ns (Levels of Logic = 2)
+  Source:            en_4 (FF)
+  Destination:       sseg<7> (PAD)
+  Source Clock:      clk_sseg rising
+
+  Data Path: en_4 to sseg<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.650  en_4 (en_4)
+     INV:I->O              1   0.206   0.579  en<5>_inv1_INV_0 (sseg_7_OBUF)
+     OBUF:I->O                 2.571          sseg_7_OBUF (sseg<7>)
+    ----------------------------------------
+    Total                      4.453ns (3.224ns logic, 1.229ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Mram__n00964
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |    1.428|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.779|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sseg
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Mram__n00964   |    2.122|         |         |         |
+clk_sseg       |    2.790|         |         |         |
+clk_user       |    2.585|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_user
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |    2.800|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.58 secs
+ 
+--> 
+
+Total memory usage is 4486800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   38 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
+

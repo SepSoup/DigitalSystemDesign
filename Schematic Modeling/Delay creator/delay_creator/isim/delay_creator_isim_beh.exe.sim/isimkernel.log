@@ -1,0 +1,28 @@
+Command line:
+   delay_creator_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  65403
+
+Sat Nov 30 02:56:11 2024
+
+
+ Elaboration Time: 0.140625 sec
+
+ Current Memory Usage: 5154.97 Meg
+
+ Total Signals          : 41
+ Total Nets             : 48
+ Total Signal Drivers   : 18
+ Total Blocks           : 7
+ Total Primitive Blocks : 6
+ Total Processes        : 23
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 146
+
+ Total Simulation Time: 0.765625 sec
+
+ Current Memory Usage: 4997.68 Meg
+
+Sat Nov 30 03:02:00 2024
+

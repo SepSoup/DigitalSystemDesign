@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "F:/University Classes/VHDL/In Class Ex/24-ise_delay_creator/delay_creator/delay_creator_isim_beh.exe" -prj "F:/University Classes/VHDL/In Class Ex/24-ise_delay_creator/delay_creator/delay_creator_beh.prj" "work.delay_creator" "work.glbl" 

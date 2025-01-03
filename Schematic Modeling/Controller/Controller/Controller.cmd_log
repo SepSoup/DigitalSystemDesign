@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.syr" 
+xst -intstyle ise -ifn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.xst" -ofn "C:/Users/Olivia/OneDrive/Desktop/sepehr/Controller/Controller/Controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-ftg256-3 Controller.ngc Controller.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Controller_map.ncd Controller.ngd Controller.pcf 
+par -w -intstyle ise -ol high -mt off Controller_map.ncd Controller.ncd Controller.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Controller.twx Controller.ncd -o Controller.twr Controller.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Controller.ucf -p xc6slx9-ftg256-3 Controller.ngc Controller.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Controller_map.ncd Controller.ngd Controller.pcf 
+par -w -intstyle ise -ol high -mt off Controller_map.ncd Controller.ncd Controller.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Controller.twx Controller.ncd -o Controller.twr Controller.pcf -ucf Controller.ucf 
+bitgen -intstyle ise -f Controller.ut Controller.ncd 

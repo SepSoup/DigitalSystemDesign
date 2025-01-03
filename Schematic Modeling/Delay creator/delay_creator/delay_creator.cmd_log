@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "F:/University Classes/VHDL/In Class Ex/24-ise_delay_creator/delay_creator/delay_creator.xst" -ofn "F:/University Classes/VHDL/In Class Ex/24-ise_delay_creator/delay_creator/delay_creator.syr" 

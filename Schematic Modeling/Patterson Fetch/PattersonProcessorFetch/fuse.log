@@ -1,0 +1,25 @@
+Running: D:\Sepehr\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/Fetch_isim_beh.exe -prj C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/Fetch_beh.prj work.Fetch work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/ipcore_dir/IM.v" into library work
+Analyzing Verilog file "C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/Fetch.vf" into library work
+Analyzing Verilog file "D:/Sepehr/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module PULLUP
+Compiling module CB4CE_HXILINX_Fetch
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module IM
+Compiling module Fetch
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/Fetch_isim_beh.exe
+Fuse Memory Usage: 32452 KB
+Fuse CPU Usage: 640 ms

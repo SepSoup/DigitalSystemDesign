@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Dec 29 18:07:58 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "M6" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P5" LEVEL 1;
+COMP "key1" LOCATE = SITE "C3" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "N5" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P4" LEVEL 1;
+COMP "sseg<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "sseg<1>" LOCATE = SITE "E6" LEVEL 1;
+COMP "sseg<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "sseg<3>" LOCATE = SITE "F7" LEVEL 1;
+COMP "sseg<4>" LOCATE = SITE "D6" LEVEL 1;
+COMP "sseg<5>" LOCATE = SITE "E7" LEVEL 1;
+COMP "sseg<6>" LOCATE = SITE "D5" LEVEL 1;
+COMP "sseg<7>" LOCATE = SITE "C6" LEVEL 1;
+COMP "en<0>" LOCATE = SITE "D8" LEVEL 1;
+COMP "en<1>" LOCATE = SITE "E8" LEVEL 1;
+COMP "en<2>" LOCATE = SITE "F9" LEVEL 1;
+COMP "en<3>" LOCATE = SITE "F10" LEVEL 1;
+COMP "en<4>" LOCATE = SITE "E10" LEVEL 1;
+COMP "en<5>" LOCATE = SITE "D9" LEVEL 1;
+SCHEMATIC END;
+

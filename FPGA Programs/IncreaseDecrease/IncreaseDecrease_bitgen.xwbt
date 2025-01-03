@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.ncd
+OUTFILE=C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease
+LICENSE=WebPack
+USER_INFO=__0_0_0

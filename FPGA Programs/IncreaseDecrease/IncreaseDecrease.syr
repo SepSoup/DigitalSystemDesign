@@ -1,0 +1,694 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: IncreaseDecrease.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "IncreaseDecrease.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "IncreaseDecrease"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : IncreaseDecrease
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.v" into library work
+Parsing module <IncreaseDecrease>.
+WARNING:HDLCompiler:568 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.v" Line 64: Constant value is truncated to fit in <4> bits.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <IncreaseDecrease>.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.v" Line 104: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.v" Line 108: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <IncreaseDecrease>.
+    Related source file is "C:\Users\Olivia\OneDrive\Desktop\sepehr\Practice\IncreaseDecrease\IncreaseDecrease.v".
+WARNING:Xst:2999 - Signal 'mem', unconnected in block 'IncreaseDecrease', is tied to its initial value.
+    Found 1-bit register for signal <clk_user>.
+    Found 32-bit register for signal <counter1>.
+    Found 1-bit register for signal <clk_sseg>.
+    Found 6-bit register for signal <en>.
+    Found 8-bit register for signal <sseg>.
+    Found 32-bit register for signal <flag>.
+    Found 8-bit register for signal <number>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_1_o_add_2_OUT> created at line 47.
+    Found 32-bit adder for signal <counter1[31]_GND_1_o_add_7_OUT> created at line 61.
+    Found 32-bit adder for signal <flag[31]_GND_1_o_add_28_OUT> created at line 94.
+    Found 8-bit adder for signal <number[7]_GND_1_o_add_36_OUT> created at line 104.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_40_OUT<7:0>> created at line 108.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem>, simulation mismatch.
+    Found 10x8-bit dual-port Read Only RAM <Mram_mem> for signal <mem>.
+    Found 32-bit comparator greater for signal <n0000> created at line 41
+    Found 32-bit comparator greater for signal <n0008> created at line 55
+    Summary:
+	inferred   2 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 120 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <IncreaseDecrease> synthesized.
+
+Synthesizing Unit <mod_8u_4u>.
+    Related source file is "".
+    Found 12-bit adder for signal <n0241> created at line 0.
+    Found 12-bit adder for signal <GND_2_o_b[3]_add_1_OUT> created at line 0.
+    Found 11-bit adder for signal <n0245> created at line 0.
+    Found 11-bit adder for signal <GND_2_o_b[3]_add_3_OUT> created at line 0.
+    Found 10-bit adder for signal <n0249> created at line 0.
+    Found 10-bit adder for signal <GND_2_o_b[3]_add_5_OUT> created at line 0.
+    Found 9-bit adder for signal <n0253> created at line 0.
+    Found 9-bit adder for signal <GND_2_o_b[3]_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <n0257> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[3]_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <n0261> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_2_o_add_11_OUT> created at line 0.
+    Found 8-bit adder for signal <n0265> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_2_o_add_13_OUT> created at line 0.
+    Found 8-bit adder for signal <n0269> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_2_o_add_15_OUT> created at line 0.
+    Found 8-bit adder for signal <n0273> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_2_o_add_17_OUT> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred  18 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  65 Multiplexer(s).
+Unit <mod_8u_4u> synthesized.
+
+Synthesizing Unit <div_8u_4u>.
+    Related source file is "".
+    Found 12-bit adder for signal <GND_3_o_b[3]_add_1_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_3_o_b[3]_add_3_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_3_o_b[3]_add_5_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_3_o_b[3]_add_7_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[3]_add_9_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_3_o_add_11_OUT[7:0]> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_3_o_add_13_OUT[7:0]> created at line 0.
+    Found 8-bit adder for signal <a[7]_GND_3_o_add_15_OUT[7:0]> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  43 Multiplexer(s).
+Unit <div_8u_4u> synthesized.
+
+Synthesizing Unit <div_8u_7u>.
+    Related source file is "".
+    Found 15-bit adder for signal <GND_4_o_b[6]_add_1_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_4_o_b[6]_add_3_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_4_o_b[6]_add_5_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_4_o_b[6]_add_7_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_4_o_b[6]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_4_o_b[6]_add_11_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_4_o_b[6]_add_13_OUT> created at line 0.
+    Found 8-bit adder for signal <a[7]_b[6]_add_15_OUT[7:0]> created at line 0.
+    Found 15-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  50 Multiplexer(s).
+Unit <div_8u_7u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 10x8-bit dual-port Read Only RAM                      : 1
+ 10x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 75
+ 10-bit adder                                          : 8
+ 11-bit adder                                          : 8
+ 12-bit adder                                          : 8
+ 13-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 8-bit adder                                           : 36
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 8
+# Registers                                            : 8
+ 1-bit register                                        : 2
+ 32-bit register                                       : 3
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 47
+ 10-bit comparator lessequal                           : 5
+ 11-bit comparator lessequal                           : 5
+ 12-bit comparator lessequal                           : 5
+ 13-bit comparator lessequal                           : 1
+ 14-bit comparator lessequal                           : 1
+ 15-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 2
+ 8-bit comparator lessequal                            : 22
+ 9-bit comparator lessequal                            : 5
+# Multiplexers                                         : 293
+ 1-bit 2-to-1 multiplexer                              : 280
+ 4-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 9
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <IncreaseDecrease>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+The following registers are absorbed into counter <flag>: 1 register on signal <flag>.
+INFO:Xst:3231 - The small RAM <Mram_mem1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <number[7]_PWR_1_o_mod_20_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <number[7]_PWR_1_o_mod_12_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     addrB          | connected to signal <number[7]_PWR_1_o_mod_16_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <IncreaseDecrease> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 10x8-bit dual-port distributed Read Only RAM          : 1
+ 10x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 45
+ 4-bit adder carry in                                  : 3
+ 8-bit adder                                           : 17
+ 8-bit adder carry in                                  : 24
+ 8-bit subtractor                                      : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 3
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+# Comparators                                          : 47
+ 10-bit comparator lessequal                           : 5
+ 11-bit comparator lessequal                           : 5
+ 12-bit comparator lessequal                           : 5
+ 13-bit comparator lessequal                           : 1
+ 14-bit comparator lessequal                           : 1
+ 15-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 2
+ 8-bit comparator lessequal                            : 22
+ 9-bit comparator lessequal                            : 5
+# Multiplexers                                         : 293
+ 1-bit 2-to-1 multiplexer                              : 280
+ 4-bit 2-to-1 multiplexer                              : 3
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mram_mem9> of sequential type is unconnected in block <IncreaseDecrease>.
+WARNING:Xst:1426 - The value init of the FF/Latch en_5 hinder the constant cleaning in the block IncreaseDecrease.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch en_4 hinder the constant cleaning in the block IncreaseDecrease.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <en_3> has a constant value of 1 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sseg_7> (without init value) has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <en_4> in Unit <IncreaseDecrease> is equivalent to the following FF/Latch, which will be removed : <en_5> 
+
+Optimizing unit <IncreaseDecrease> ...
+
+Optimizing unit <mod_8u_4u> ...
+WARNING:Xst:1293 - FF/Latch <flag_31> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_30> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_29> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_28> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_27> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_26> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_25> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_24> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_23> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_22> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_21> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_20> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_19> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_18> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_17> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_16> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_15> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_14> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_13> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_12> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_11> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_10> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_9> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_8> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_7> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_6> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_5> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_4> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_3> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flag_2> has a constant value of 0 in block <IncreaseDecrease>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block IncreaseDecrease, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 87
+ Flip-Flops                                            : 87
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : IncreaseDecrease.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 355
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 63
+#      LUT2                        : 70
+#      LUT3                        : 6
+#      LUT4                        : 16
+#      LUT5                        : 26
+#      LUT6                        : 23
+#      MUXCY                       : 75
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 66
+# FlipFlops/Latches                : 87
+#      FD                          : 72
+#      FDE                         : 13
+#      FDR                         : 2
+# RAMS                             : 7
+#      RAM16X1D                    : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 2
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              87  out of  11440     0%  
+ Number of Slice LUTs:                  225  out of   5720     3%  
+    Number used as Logic:               211  out of   5720     3%  
+    Number used as Memory:               14  out of   1440     0%  
+       Number used as RAM:               14
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    226
+   Number with an unused Flip Flop:     139  out of    226    61%  
+   Number with an unused LUT:             1  out of    226     0%  
+   Number of fully used LUT-FF pairs:    86  out of    226    38%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  17  out of    186     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 66    |
+clk_user                           | NONE(number_0)         | 8     |
+clk_sseg                           | NONE(en_0)             | 13    |
+en_3_OBUF                          | NONE(Mram_mem3)        | 7     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.779ns (Maximum Frequency: 264.645MHz)
+   Minimum input arrival time before clock: 3.679ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.779ns (frequency: 264.645MHz)
+  Total number of paths / destination ports: 4391 / 68
+-------------------------------------------------------------------------
+Delay:               3.779ns (Levels of Logic = 7)
+  Source:            counter1_7 (FF)
+  Destination:       clk_sseg (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: counter1_7 to clk_sseg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.995  counter1_7 (counter1_7)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_n0008_lut<0> (Mcompar_n0008_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0008_cy<0> (Mcompar_n0008_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<1> (Mcompar_n0008_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<2> (Mcompar_n0008_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<3> (Mcompar_n0008_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0008_cy<4> (Mcompar_n0008_cy<4>)
+     MUXCY:CI->O          33   0.258   1.305  Mcompar_n0008_cy<5> (Mcompar_n0008_cy<5>)
+     FDE:CE                    0.322          clk_sseg
+    ----------------------------------------
+    Total                      3.779ns (1.478ns logic, 2.301ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_user'
+  Clock period: 3.445ns (frequency: 290.276MHz)
+  Total number of paths / destination ports: 70 / 8
+-------------------------------------------------------------------------
+Delay:               3.445ns (Levels of Logic = 3)
+  Source:            number_5 (FF)
+  Destination:       number_7 (FF)
+  Source Clock:      clk_user rising
+  Destination Clock: clk_user rising
+
+  Data Path: number_5 to number_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              15   0.447   1.086  number_5 (number_5)
+     LUT2:I0->O            2   0.203   0.617  Mmux_number[7]_number[7]_mux_37_OUT_rs_cy<5>1_SW0 (N0)
+     LUT6:I5->O            1   0.205   0.580  Mmux_number[7]_number[7]_mux_37_OUT_rs_cy<5>1 (Mmux_number[7]_number[7]_mux_37_OUT_rs_cy<5>)
+     LUT6:I5->O            1   0.205   0.000  Mmux_number[7]_GND_1_o_mux_40_OUT81 (number[7]_GND_1_o_mux_40_OUT<7>)
+     FD:D                      0.102          number_7
+    ----------------------------------------
+    Total                      3.445ns (1.162ns logic, 2.283ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_sseg'
+  Clock period: 2.867ns (frequency: 348.784MHz)
+  Total number of paths / destination ports: 48 / 25
+-------------------------------------------------------------------------
+Delay:               2.867ns (Levels of Logic = 1)
+  Source:            flag_0 (FF)
+  Destination:       en_0 (FF)
+  Source Clock:      clk_sseg rising
+  Destination Clock: clk_sseg rising
+
+  Data Path: flag_0 to en_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.447   1.013  flag_0 (flag_0)
+     LUT2:I0->O           11   0.203   0.882  _n0108_inv1 (_n0108_inv)
+     FDE:CE                    0.322          en_0
+    ----------------------------------------
+    Total                      2.867ns (0.972ns logic, 1.895ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_user'
+  Total number of paths / destination ports: 22 / 8
+-------------------------------------------------------------------------
+Offset:              3.679ns (Levels of Logic = 3)
+  Source:            key1 (PAD)
+  Destination:       number_7 (FF)
+  Destination Clock: clk_user rising
+
+  Data Path: key1 to number_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.194  key1_IBUF (key1_IBUF)
+     LUT6:I0->O            3   0.203   0.755  Mmux_number[7]_GND_1_o_mux_40_OUT6111 (Mmux_number[7]_GND_1_o_mux_40_OUT611)
+     LUT6:I4->O            1   0.203   0.000  Mmux_number[7]_GND_1_o_mux_40_OUT81 (number[7]_GND_1_o_mux_40_OUT<7>)
+     FD:D                      0.102          number_7
+    ----------------------------------------
+    Total                      3.679ns (1.730ns logic, 1.949ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_sseg'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            en_4 (FF)
+  Destination:       en<5> (PAD)
+  Source Clock:      clk_sseg rising
+
+  Data Path: en_4 to en<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  en_4 (en_4)
+     OBUF:I->O                 2.571          en_5_OBUF (en<5>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.779|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_sseg
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_sseg       |    2.867|         |         |         |
+clk_user       |    8.103|         |         |         |
+en_3_OBUF      |    2.122|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_user
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |    3.445|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock en_3_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_user       |    6.797|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.22 secs
+ 
+--> 
+
+Total memory usage is 4502992 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

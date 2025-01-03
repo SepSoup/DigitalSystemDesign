@@ -1,0 +1,85 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Fetch.vf
+// /___/   /\     Timestamp : 12/07/2024 16:36:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath "C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/ipcore_dir" -intstyle ise -family spartan6 -verilog "C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/Fetch.vf" -w "C:/Users/Olivia/OneDrive/Desktop/sepehr/Patterson Fetch/PattersonProcessorFetch/Fetch.sch"
+//Design Name: Fetch
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CB4CE_HXILINX_Fetch(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 4'b1111;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+	  {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Fetch(clear, 
+             clk, 
+             ad, 
+             Instruction);
+
+    input clear;
+    input clk;
+   output [3:0] ad;
+   output [31:0] Instruction;
+   
+   wire XLXN_58;
+   wire [3:0] ad_DUMMY;
+   
+   assign ad[3:0] = ad_DUMMY[3:0];
+   PULLUP  XLXI_51 (.O(XLXN_58));
+   (* HU_SET = "XLXI_55_0" *) 
+   CB4CE_HXILINX_Fetch  XLXI_55 (.C(clk), 
+                                .CE(XLXN_58), 
+                                .CLR(clear), 
+                                .CEO(), 
+                                .Q0(ad_DUMMY[0]), 
+                                .Q1(ad_DUMMY[1]), 
+                                .Q2(ad_DUMMY[2]), 
+                                .Q3(ad_DUMMY[3]), 
+                                .TC());
+   IM  XLXI_56 (.addra(ad_DUMMY[3:0]), 
+               .clka(clk), 
+               .douta(Instruction[31:0]));
+endmodule
